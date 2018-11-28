@@ -1,0 +1,276 @@
+------------------------------------------------------------------------------NEEDED FOR ENGINE------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+TEXT ENGINE:
+	--ADDED: Text Engine. STATUS: Nearly Complete	
+		--Needed
+		  Ability to freely use colored text	
+		--Bugs
+		  Can read right after you just read or while jumping. fucks with dialouge	
+------------------------------------------------------------------------------
+HEALTH AND LIVES:
+	--ADDED: Custom HP Bar. STATUS: Incomplete
+		--Needed
+		  Feather effects falling from hpbar
+		  dying resetting room/losing a life
+		  portrait in between feathers
+		  hp bar changing with pallet?
+
+------------------------------------------------------------------------------
+UPGRADES(Sun and Moon):
+	--ADDED: Shrines. STATUS: Incomplete
+		--Needed
+		  Bringing all 6 orbs, or having 3 while being fully decked out in one to a super statue
+------------------------------------------------------------------------------
+COMBAT:
+	Have downsmash be a link type move
+	have upsmash be a megaman x2 slice into air
+	have neutral be a lucina spin
+	Simple enemies(snails)/maybe practice dummies
+	Recoil/Hit/Blood 
+------------------------------------------------------------------------------
+Pause menus for world map, upgrades/progress/options
+	--ADDED: GUI Menu. STATUS: Incomplete
+		--Needed
+		  Scrolling pause menus, Minimap>Upgrades>Options>???
+		
+------------------------------------------------------------------------------
+Room progression
+	--ADDED: Door System. STATUS: Mostly complete
+		--Needed
+		  Zone text upon entry
+------------------------------------------------------------------------------
+Saving and save warps
+------------------------------------------------------------------------------
+Controller Support
+	--ADDED: Xbox Controller. STATUS: Incomplete
+		--Needed
+		  Self setting keys
+------------------------------------------------------------------------------
+Darkness setting
+	--ADDED: con_lightManager STATUS: Complete
+		torch in room or global.roomdark = shallow
+		torch in room + 2 con_lM = dark, still can see platforms
+		+3 con_lM = very dark, can barely see anything.
+------------------------------------------------------------------------------
+Weather Controls
+------------------------------------------------------------------------------
+--Extras--
+Dash making you invulnerable
+dope ass clouds?
+cave fog not clipping on screen
+---------------------------------------------------------------------------Sword/Armor/Movement Upgrades---------------------------------------------------------------------------
+Solar Armor:
+	Sword: Sword combos leave projectiles at final slash/downair(fire), at full health your sword does more dmg. Longsword, slow
+	Armor: Out of combat healing, more vision in caves, +2 feather layer 
+	Movement: Stun enemy for a short time? minato flash/tp that stuns at old location
+		Counter: Stuns/shocks enemy
+
+Lunar Armor:
+	Sword: Smoother combo/no combo time, lower hp = more damage. dual scimmys
+	Armor: standing still invis, longer invuln frame, , +1 feather layer
+	Movement:  (Chance?) Deal Damage/leave DOT cloud behind, or leave exploding dummy behind?
+		Counter: Marth slash(small dmg)
+Dual Armor:
+	Sword: dual shortswords, one with yellow fire and one with purple fire
+	Armor: Standing invis and out of combat heal, +2 feather layer 
+	Movement: Slow down time for everyone but you
+		Counter: ????
+
+Lunar armor has whites/grays/purples. Owl facemask. dual scimmys with "moon blades"
+Solar armor has reds/yellows/oranges. Phoenix fire sword
+
+Dual armor has ???
+---------------------------------------------------------------------------Backstory and Plot Ideas----------------------------------------------------------------------------
+Start as unnamed gray(choose color?) bird found in temple
+Raised in neutral city by an old guy
+trains you in basic movement/combat
+you can talk to people in village and hear good/bad about sun/moon
+library that has vague info on fighting style/upgrades
+talk to gramps and pick a side
+go to that city and they test you out and find out you are a super good warrior
+(possible shitter mission? go kill X miniboss in X location)
+fill you in on the 3 orbs you need to get
+get those orbs, straight 1v10000 the leader and their army of minions
+right before the 1v100000 your soul awakens.
+sun/moon eyes with slit
+after enemies have red(mothers) aura
+pawns of mother god who is trying to revive through hatred
+warrior spirit helps you take back your sides orbs before they can take over the world
+the second you get all 6 and walk into the church you transform into dual armor
+travel into different world(demise style?)
+kill mother god, win game
+
+
+---------------------------------------------------------------------------Coding Pastebin-----------------------------------------------------------------------------------------------
+101 = sundodge
+102 = sunarmor
+103 = sunsword
+104 = moondodge
+105 = moonarmor
+106 = moonsword
+
+33x10 = where to draw text
+
+57,82
+
+------------------
+			if ((room_height > 480) || (room_width > 640))
+			{
+				if (obj_save.x < 640)
+					{
+						if (obj_save.y < 480)
+							{
+								mapGrid[global.gridY,global.gridX] = 2;
+								mapGrid[global.gridY+1,global.gridX] = 1;
+								mapGrid[global.gridY+2,global.gridX] = 1;
+								//
+								mapGrid[global.gridY,global.gridX+1] = 1;
+								mapGrid[global.gridY+1,global.gridX+1] = 1;
+								mapGrid[global.gridY+2,global.gridX+1] = 1;
+								//
+								mapGrid[global.gridY,global.gridX+2] = 1;
+								mapGrid[global.gridY+1,global.gridX+2] = 1;
+								mapGrid[global.gridY+2,global.gridX+2] = 1;
+								//
+							}
+						if ((obj_save.y > 480) && (obj_save.y < 960))
+							{
+								mapGrid[global.gridY,global.gridX] = 1;
+								mapGrid[global.gridY+1,global.gridX] = 2;
+								mapGrid[global.gridY+2,global.gridX] = 1;
+								//
+								mapGrid[global.gridY,global.gridX+1] = 1;
+								mapGrid[global.gridY+1,global.gridX+1] = 1;
+								mapGrid[global.gridY+2,global.gridX+1] = 1;
+								//
+								mapGrid[global.gridY,global.gridX+2] = 1;
+								mapGrid[global.gridY+1,global.gridX+2] = 1;
+								mapGrid[global.gridY+2,global.gridX+2] = 1;
+								//
+							}
+							/*
+						if ((obj_save.y > 960) && (obj_save.y < 1440))
+							{	
+								mapGrid[global.gridY,global.gridX] = 1;
+								mapGrid[global.gridY+1,global.gridX] = 1;
+								mapGrid[global.gridY+2,global.gridX] = 2;
+								//
+								mapGrid[global.gridY,global.gridX+1] = 1;
+								mapGrid[global.gridY+1,global.gridX+1] = 1;
+								mapGrid[global.gridY+2,global.gridX+1] = 1;
+								//
+								mapGrid[global.gridY,global.gridX+2] = 1;
+								mapGrid[global.gridY+1,global.gridX+2] = 1;
+								mapGrid[global.gridY+2,global.gridX+2] = 1;
+								//
+							}
+							*/
+					}
+				if ((obj_save.x > 640) && (obj_save.x < 1280))
+					{
+						if (obj_save.y < 480)
+							{
+								//
+								mapGrid[global.gridY,global.gridX] = 1;
+								mapGrid[global.gridY+1,global.gridX] = 1;
+								mapGrid[global.gridY+2,global.gridX] = 1;
+								//
+								mapGrid[global.gridY,global.gridX+1] = 2;
+								mapGrid[global.gridY+1,global.gridX+1] = 1;
+								mapGrid[global.gridY+2,global.gridX+1] = 1;
+								//
+								mapGrid[global.gridY,global.gridX+2] = 1;
+								mapGrid[global.gridY+1,global.gridX+2] = 1;
+								mapGrid[global.gridY+2,global.gridX+2] = 1;
+								//
+							}
+						if ((obj_save.y > 480) && (obj_save.y < 960))
+							{
+								//
+								mapGrid[global.gridY,global.gridX] = 1;
+								mapGrid[global.gridY+1,global.gridX] = 1;
+								mapGrid[global.gridY+2,global.gridX] = 1;
+								//
+								mapGrid[global.gridY,global.gridX+1] = 1;
+								mapGrid[global.gridY+1,global.gridX+1] = 2;
+								mapGrid[global.gridY+2,global.gridX+1] = 1;
+								//
+								mapGrid[global.gridY,global.gridX+2] = 1;
+								mapGrid[global.gridY+1,global.gridX+2] = 1;
+								mapGrid[global.gridY+2,global.gridX+2] = 1;
+								//
+							}
+								/*
+						if ((obj_save.y > 960) && (obj_save.y < 1440))
+							{
+								//
+								mapGrid[global.gridY,global.gridX] = 1;
+								mapGrid[global.gridY+1,global.gridX] = 1;
+								mapGrid[global.gridY+2,global.gridX] = 1;
+								//
+								mapGrid[global.gridY,global.gridX+1] = 1;
+								mapGrid[global.gridY+1,global.gridX+1] = 1;
+								mapGrid[global.gridY+2,global.gridX+1] = 2;
+								//
+								mapGrid[global.gridY,global.gridX+2] = 1;
+								mapGrid[global.gridY+1,global.gridX+2] = 1;
+								mapGrid[global.gridY+2,global.gridX+2] = 1;
+								//
+							}
+							*/
+					}
+				if ((obj_save.x > 1280) && (obj_save.x < 1920))
+					{
+						if (obj_save.y < 480)
+							{
+								//
+								mapGrid[global.gridY,global.gridX] = 1;
+								mapGrid[global.gridY+1,global.gridX] = 1;
+								mapGrid[global.gridY+2,global.gridX] = 1;
+								//
+								mapGrid[global.gridY,global.gridX+1] = 1;
+								mapGrid[global.gridY+1,global.gridX+1] = 1;
+								mapGrid[global.gridY+2,global.gridX+1] = 1;
+								//
+								mapGrid[global.gridY,global.gridX+2] = 2;
+								mapGrid[global.gridY+1,global.gridX+2] = 1;
+								mapGrid[global.gridY+2,global.gridX+2] = 1;
+							}
+						if ((obj_save.y > 480) && (obj_save.y < 960))
+							{
+								//
+								mapGrid[global.gridY,global.gridX] = 1;
+								mapGrid[global.gridY+1,global.gridX] = 1;
+								mapGrid[global.gridY+2,global.gridX] = 1;
+								//
+								mapGrid[global.gridY,global.gridX+1] = 1;
+								mapGrid[global.gridY+1,global.gridX+1] = 1;
+								mapGrid[global.gridY+2,global.gridX+1] = 1;
+								//
+								mapGrid[global.gridY,global.gridX+2] = 1;
+								mapGrid[global.gridY+1,global.gridX+2] = 2;
+								mapGrid[global.gridY+2,global.gridX+2] = 1;
+							}
+								/*
+						if ((obj_save.y > 960) && (obj_save.y < 1440))
+							{
+								//
+								mapGrid[global.gridY,global.gridX] = 1;
+								mapGrid[global.gridY+1,global.gridX] = 1;
+								mapGrid[global.gridY+2,global.gridX] = 1;
+								//
+								mapGrid[global.gridY,global.gridX+1] = 1;
+								mapGrid[global.gridY+1,global.gridX+1] = 1;
+								mapGrid[global.gridY+2,global.gridX+1] = 1;
+								//
+								mapGrid[global.gridY,global.gridX+2] = 1;
+								mapGrid[global.gridY+1,global.gridX+2] = 1;
+								mapGrid[global.gridY+2,global.gridX+2] = 2;
+								//
+							}
+							*/
+					}
+				
+				}
+			else
+------------------------

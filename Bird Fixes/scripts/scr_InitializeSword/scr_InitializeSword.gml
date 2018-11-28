@@ -1,0 +1,7 @@
+spr_player_sword1S = spr_parent_sword1NM;
+spr_player_sword2S = spr_parent_sword2NM;
+spr_player_sword3S = spr_parent_sword3NM;
+spr_player_sword_wallslideS = spr_parent_sword_wallslideNM;
+spr_player_sword_jumpUS = spr_parent_sword_jumpUNM;
+spr_player_sword_jumpS = spr_parent_sword_jumpNM;
+spr_player_sword_jumpDS = spr_parent_sword_jumpDNM;

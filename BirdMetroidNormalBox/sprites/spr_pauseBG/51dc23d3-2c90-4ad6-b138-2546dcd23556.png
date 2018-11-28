@@ -1,0 +1,18 @@
+WindowsPrep                Window [000305CC] has been input-enabled.
+[03:06:39.00854- 12500] Runner.exe      ltc_game.cpp(5749)    MainThread                     Waiting for shutdown event (00000F84) or unload event...
+[03:06:39.00857- 12536] Runner.exe      ltc_game.cpp(2946)    LogRunningProcesses            001.                 [System Process] PID      0 Parent PID:      0 Usage:      0 Threads:    6 Priority base:      0 Flags: 0x00000000
+[03:06:39.00857- 12536] Runner.exe      ltc_game.cpp(2946)    LogRunningProcesses            002.                           System PID      4 Parent PID:      0 Usage:      0 Threads:  133 Priority base:      8 Flags: 0x00000000
+[03:06:39.00857- 12536] Runner.exe      ltc_game.cpp(2946)    LogRunningProcesses            003.                         Registry PID    108 Parent PID:      4 Usage:      0 Threads:    3 Priority base:      8 Flags: 0x00000000
+[03:06:39.00857- 12536] Runner.exe      ltc_game.cpp(2946)    LogRunningProcesses            004.                         smss.exe PID    356 Parent PID:      4 Usage:      0 Threads:    2 Priority base:     11 Flags: 0x00000000
+[03:06:39.00858- 12536] Runner.exe      ltc_game.cpp(2946)    LogRunningProcesses            005.                        csrss.exe PID    452 Parent PID:    432 Usage:      0 Threads:   12 Priority base:     13 Flags: 0x00000000
+[03:06:39.00858- 12536] Runner.exe      ltc_game.cpp(2946)    LogRunningProcesses            006.                      wininit.exe PID    612 Parent PID:    432 Usage:      0 Threads:    1 Priority base:     13 Flags: 0x00000000
+[03:06:39.00858- 12536] Runner.exe      ltc_game.cpp(2946)    LogRunningProcesses            007.                        csrss.exe PID    620 Parent PID:    604 Usage:      0 Threads:   14 Priority base:     13 Flags: 0x00000000
+[03:06:39.00858- 12536] Runner.exe      ltc_game.cpp(2946)    LogRunningProcesses            008.                     services.exe PID    692 Parent PID:    612 Usage:      0 Threads:    8 Priority base:      9 Flags: 0x00000000
+[03:06:39.00858- 12536] Runner.exe      ltc_game.cpp(2946)    LogRunningProcesses            009.                        lsass.exe PID    712 Parent PID:    612 Usage:      0 Threads:    8 Priority base:      9 Flags: 0x00000000
+[03:06:39.00858- 12536] Runner.exe      ltc_game.cpp(2946)    LogRunningProcesses            010.                      svchost.exe PID    844 Parent PID:    692 Usage:      0 Threads:    2 Priority base:      8 Flags: 0x00000000
+[03:06:39.00858- 12536] Runner.exe      ltc_game.cpp(2946)    LogRunningProcesses            011.                      svchost.exe PID    876 Parent PID:    692 Usage:      0 Threads:   21 Priority base:      8 Flags: 0x00000000
+[03:06:39.00858- 12536] Runner.exe      ltc_game.cpp(2946)    LogRunningProcesses            012.                  fontdrvhost.exe PID    888 Parent PID:    612 Usage:      0 Threads:    5 Priority base:      8 Flags: 0x00000000
+[03:06:39.00858- 12536] Runner.exe      ltc_game.cpp(2946)    LogRunningProcesses            013.                     winlogon.exe PID    976 Parent PID:    604 Usage:      0 Threads:    5 Priority base:     13 Flags: 0x00000000
+[03:06:39.00858- 12536] Runner.exe      ltc_game.cpp(2946)    LogRunningProcesses            014.                  fontdrvhost.exe PID     80 Parent PID:    976 Usage:      0 Threads:    5 Priority base:      8 Flags: 0x00000000
+[03:06:39.00858- 12536] Runner.exe      ltc_game.cpp(2946)    LogRunningProcesses            015.                      svchost.exe PID    396 Parent PID:    692 Usage:      0 Threads:   14 Priority base:      8 Flags: 0x00000000
+[03:06:39.

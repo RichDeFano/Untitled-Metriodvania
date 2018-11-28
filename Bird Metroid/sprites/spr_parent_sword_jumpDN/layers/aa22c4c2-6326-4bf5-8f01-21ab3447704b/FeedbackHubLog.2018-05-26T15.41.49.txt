@@ -1,0 +1,7 @@
+05/26/2018 15:41:49  0       :      Info  Activity ID: bbaa9a49-5bd0-464e-8a8f-3afb90dc395a
+05/26/2018 15:41:49  0       :      Info  App Version: 1.1712.1141.0
+05/26/2018 15:41:49  0       :      Info  Task[NotificationAggregatorBackgroundTaskOnTimer]
+05/26/2018 15:41:49  0       :      Info  HandleTimer: Cost[Low]
+05/26/2018 15:41:49  0       :      Info  Type[Announcement] Content[]
+05/26/2018 15:41:49  0       :      Info  Type[Quest] Content[]
+05/26/2018 15:41:49  0       :      Info  Type[Feedback] Content[]

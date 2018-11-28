@@ -1,0 +1,20 @@
+------------------------------TEXTBOX NUMBERS-----------------------
+0 = else			[Wooden with Design Markings]
+1 = "Upgrade"        		[Purple Themed]
+2 = "????"(Moon Stone)		[Moon]
+3 = "???? "(Sun Stone)		[Sun]
+4 
+
+
+
+
+-------------------------------List of names
+*Blank*		- 0
+Upgrade		- 1
+Lunar Orb	- 2
+Solar Orb	- 3
+Lunar Upgrade	- 4
+Solar Upgrade	- 5
+-Lunar Shrine-	- 6
+-Solar Shrine-	- 7
+TestNPC		- 8

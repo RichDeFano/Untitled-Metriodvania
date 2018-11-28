@@ -1,0 +1,1 @@
+myroomGoto = OreMine_1_1;
