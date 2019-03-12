@@ -1,0 +1,1 @@
+thisColor = c_red;

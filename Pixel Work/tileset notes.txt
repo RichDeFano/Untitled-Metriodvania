@@ -1,0 +1,14 @@
+Gem having one/two/three div
+get one looking good before making two or three
+can connect in clusters or solo
+
+algorithm for spawning a random cluster 9X9 max? would handle glow and reduce tiles, as all gems could be in one sprite.
+also i could make one large glow around the sprite, or maybe spawn each one its glow
+also i could animate the glow to go in and out slowly(should do anyways for torch in general. maybe even player)
+
+
+
+Green cave merges into platform 
+green cave twists up like gem rock platform
+all caves twist up like that
+new floors that look more natural. bigger rocks, less details.

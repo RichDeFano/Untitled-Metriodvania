@@ -1,7 +1,23 @@
 ------------------------------------------------------------------------------NEEDED FOR ENGINE------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------
+BUGS:
+	Dashing into wall instead of dashing off of wall
+	room to elevator room in gemstone offset
+	walljumping resets your dash
+	status effects dont carry over to different rooms
+	
+
+------------------------------------------------------------------------------
+SAVE SYSTEM:
+------------------------------------------------------------------------------
+BOSS FIGHTS:
+------------------------------------------------------------------------------
+ENEMIES:
 ------------------------------------------------------------------------------
 TEXT ENGINE:
-	--ADDED: Text Engine. STATUS: Nearly Complete	
+	--ADDED: Text Engine. STATUS: Complete, extendable	
 		--Needed
 		  Ability to freely use colored text	
 		--Bugs
@@ -10,50 +26,75 @@ TEXT ENGINE:
 HEALTH AND LIVES:
 	--ADDED: Custom HP Bar. STATUS: Incomplete
 		--Needed
-		  Feather effects falling from hpbar
-		  dying resetting room/losing a life
-		  portrait in between feathers
-		  hp bar changing with pallet?
-
-------------------------------------------------------------------------------
-UPGRADES(Sun and Moon):
-	--ADDED: Shrines. STATUS: Incomplete
-		--Needed
-		  Bringing all 6 orbs, or having 3 while being fully decked out in one to a super statue
-------------------------------------------------------------------------------
-COMBAT:
-	Have downsmash be a link type move
-	have upsmash be a megaman x2 slice into air
-	have neutral be a lucina spin
-	Simple enemies(snails)/maybe practice dummies
-	Recoil/Hit/Blood 
+		  dying = restart from last save?
 ------------------------------------------------------------------------------
 Pause menus for world map, upgrades/progress/options
 	--ADDED: GUI Menu. STATUS: Incomplete
 		--Needed
-		  Scrolling pause menus, Minimap>Upgrades>Options>???
-		
-------------------------------------------------------------------------------
-Room progression
-	--ADDED: Door System. STATUS: Mostly complete
-		--Needed
-		  Zone text upon entry
-------------------------------------------------------------------------------
-Saving and save warps
+		Settings Page
+		Scrolling map on menu?
 ------------------------------------------------------------------------------
 Controller Support
 	--ADDED: Xbox Controller. STATUS: Incomplete
 		--Needed
 		  Self setting keys
 ------------------------------------------------------------------------------
-Darkness setting
-	--ADDED: con_lightManager STATUS: Complete
-		torch in room or global.roomdark = shallow
-		torch in room + 2 con_lM = dark, still can see platforms
-		+3 con_lM = very dark, can barely see anything.
+Saving and save warps:
+	--ADDED: AUS/metroidvania style save warps. STATUS: COMPLETE
 ------------------------------------------------------------------------------
 Weather Controls
+	--ADDED: con_weatherManager STATUS: COMPLETE
 ------------------------------------------------------------------------------
+Slopes
+	--ADDED: obj_slope STATUS: COMPLETE :)
+------------------------------------------------------------------------------
+Jumpthrough Platforms
+	--ADDED: obj_wallJT STATUS: COMPLETE
+------------------------------------------------------------------------------
+Room Exploration
+	--ADDED: obj_roomTransition/obj_zoneTransition STATUS: COMPLETE
+------------------------------------------------------------------------------
+Room Darkness
+	--ADDED: con_lightManager STATUS: COMPLETE
+------------------------------------------------------------------------------
+UPGRADES(Sun and Moon):
+	--ADDED: Shrine System STATUS: Incomplete
+		--If you have orbs, you can toggle available slot on or off
+		--putting two orbs on one piece makes you go insane and slowly lose HP
+		--putting on all orbs gives you super armor(one way?)
+------------------------------------------------------------------------------
+Status Effects:
+	--ADDED 5 Status Effects STATUS: COMPLETE
+------------------------------------------------------------------------------
+COMBAT:
+	--ADDED: Sword Mechanics. STATUS: COMPLETE(until real sprites/armor abilities)
+------------------------------------------------------------------------------
+112,18
+121,18
+112,27
+-------
+79,68		171,69
+79,97		171,98
+79,126		171,127
+---
+Sword: 104,92
+Boots: 139,106
+Helmet: 122,66
+bugs: 
+dash resets on wall cling, dash can be done infinitiely into wall
+
+
+Tasks for GemstoneCavern:
+
+Swimming or slower movement in water?
+a BG/FG system like AUS?
+
+General Tasks:
+What to do with map. Scrolling?
+Changing Minimap to look like a book?
+
+
+Day/Night Cycle
 --Extras--
 Dash making you invulnerable
 dope ass clouds?
@@ -66,33 +107,38 @@ Solar Armor:
 		Counter: Stuns/shocks enemy
 
 Lunar Armor:
-	Sword: Smoother combo/no combo time, lower hp = more damage. dual scimmys
+	Sword: Smoother combo/no combo time, lower hp = more damage. moon scimmies
 	Armor: standing still invis, longer invuln frame, , +1 feather layer
 	Movement:  (Chance?) Deal Damage/leave DOT cloud behind, or leave exploding dummy behind?
-		Counter: Marth slash(small dmg)
+		Counter: Marth slash(small dmg), disarms enemy
 Dual Armor:
-	Sword: dual shortswords, one with yellow fire and one with purple fire
+	Sword: dual shortswords(one tanto one shortsword?), one with Aura and one with Bit
 	Armor: Standing invis and out of combat heal, +2 feather layer 
 	Movement: Slow down time for everyone but you
 		Counter: ????
 
 Lunar armor has whites/grays/purples. Owl facemask. dual scimmys with "moon blades"
-Solar armor has reds/yellows/oranges. Phoenix fire sword
+Solar armor has reds/yellows/oranges. Phoenix fire sword, regal
 
-Dual armor has ???
+Dual armor has very little true armor, has magic designs when fighting
 ---------------------------------------------------------------------------Backstory and Plot Ideas----------------------------------------------------------------------------
 Start as unnamed gray(choose color?) bird found in temple
 Raised in neutral city by an old guy
 trains you in basic movement/combat
 you can talk to people in village and hear good/bad about sun/moon
 library that has vague info on fighting style/upgrades
-talk to gramps and pick a side
-go to that city and they test you out and find out you are a super good warrior
-(possible shitter mission? go kill X miniboss in X location)
-fill you in on the 3 orbs you need to get
-get those orbs, straight 1v10000 the leader and their army of minions
-right before the 1v100000 your soul awakens.
-sun/moon eyes with slit
+after visiting both cities, you are attacked by spirits. when asked what side you are, they hurt you either way.
+you have to escape the spirits
+go to that city and ask around. go to weapons store for protection, has "lore" on some legendary weapon
+asking about it has them lead you to the library
+contains info on three orbs and where they are generally located
+Getting all 3 will lead to the game seeming like its over
+throughout the game you noticed both sides are corrupt/not healthy because of the people at the top using the orbs poorly
+they ask you to kill someone you met and you say no
+have to take them down now
+get those orbs, kill the last bad leader
+soul in you wants all its memories back
+sun/moon eyes with slit, enemies and projectiles move a little slower, you hit harder and have glowing patterns
 after enemies have red(mothers) aura
 pawns of mother god who is trying to revive through hatred
 warrior spirit helps you take back your sides orbs before they can take over the world
@@ -274,3 +320,37 @@ kill mother god, win game
 				}
 			else
 ------------------------
+
+global.raining = false;
+global.surf = surface_create(room_width,room_height);
+global.current_room = room;
+
+
+10 orange on each ride
+10 red on each side
+
+
+if (image_index > 0)
+{
+	if (image_index % 2 == 0)
+	{on right side}
+	else
+	{on left side}
+}
+
+
+///////////////
+Wall jump = Wall Cling
+jump blocks = Drafting
+dash = Dodge and Counter
+save warp = Fast Travel
+gemstone = -1,-1
+else 1,1
+---------------Types of Enemies:
+Combat should be fluid, looking for an opening after the enemy misses you. if they hit you, they get to reup their defense while youre stunned.
+NOT OOT style waiting, something more natural
+Gemstone Cavern enemies:
+	Bats
+	Stepping Stone/Sinking beetles
+	Moles
+	giant/poison bugs
