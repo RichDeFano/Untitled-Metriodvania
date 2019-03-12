@@ -1,1 +1,0 @@
-sunOrbNumber = 3;
