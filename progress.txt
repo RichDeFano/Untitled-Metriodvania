@@ -1,13 +1,9 @@
-------------------------------------------------------------------------------NEEDED FOR ENGINE------------------------------------------------------------------------------
+---------------------------------NEEDED FOR ENGINE------------------------------------------------------------------------------
 
 
 ------------------------------------------------------------------------------
 BUGS:
-	Dashing into wall instead of dashing off of wall
-	room to elevator room in gemstone offset
-	walljumping resets your dash
-	status effects dont carry over to different rooms
-	
+	Can read right after you just read or while jumping. fucks with dialouge
 
 ------------------------------------------------------------------------------
 SAVE SYSTEM:
@@ -19,9 +15,7 @@ ENEMIES:
 TEXT ENGINE:
 	--ADDED: Text Engine. STATUS: Complete, extendable	
 		--Needed
-		  Ability to freely use colored text	
-		--Bugs
-		  Can read right after you just read or while jumping. fucks with dialouge	
+		  Ability to freely use colored text		
 ------------------------------------------------------------------------------
 HEALTH AND LIVES:
 	--ADDED: Custom HP Bar. STATUS: Incomplete
