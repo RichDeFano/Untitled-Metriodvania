@@ -4,12 +4,15 @@
 ------------------------------------------------------------------------------
 BUGS:
 	Can read right after you just read or while jumping. messes with dialouge
+	need to check gamepad before updating in counter
+	counter shouldnt activate on initial click
 
 ------------------------------------------------------------------------------
 SAVE SYSTEM:
 		--Needed
 			-Saving game data
 			-Menu Screen/Loading data
+				-encrypting save files if the output is just text
 ------------------------------------------------------------------------------
 BOSS FIGHTS:
 		--Needed
@@ -39,9 +42,7 @@ Pause menus for world map, upgrades/progress/options
 		Scrolling map on menu?
 ------------------------------------------------------------------------------
 Controller Support
-	--ADDED: Pause Menu STATUS: Incomplete
-		--Needed
-		  -Changing Keys in menu
+	--ADDED: Customizable, With Gamepad Support. STATUS: COMPLETE
 ------------------------------------------------------------------------------
 Save Warps:
 	--ADDED: AUS/metroidvania style save warps. STATUS: COMPLETE
