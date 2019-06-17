@@ -23,6 +23,7 @@ global.destX = 0;
 global.destY = 0;
 global.showZone = false;
 global.testVar = 0;
+
 //Ability Unlocks
 global.dodgeUnlocked = true;
 global.wallJumpUnlocked = true;
@@ -35,7 +36,6 @@ global.mmUpgradeUnlocked = false;
 global.orbTrackUnlocked = false;
 global.magnetMoneyUnlocked = false;
 global.dashCDUnlocked = false;
-
 
 //Solar and Lunar Armor Unlocks
 global.swordLightUnlocked = false;
@@ -57,6 +57,7 @@ global.moonOrb3Unlocked = false;
 global.sunOrb1Unlocked = false;
 global.sunOrb2Unlocked = false;
 global.sunOrb3Unlocked = false;
+
 //Minimap
 global.isSave = false;
 global.isBoss = false;
@@ -74,6 +75,9 @@ global.mmY4 = 0;
 global.roomdark = false;
 global.inText = false;
 global.pause = false;
+global.atShrine = false;
+global.canInteractShrine = false;
+
 //Map and Movement
 global.zone = "";
 global.canInteract = false;
@@ -83,6 +87,7 @@ global.inZone = "";
 global.mapMoving = false;
 global.tempGrav = 0.2;
 global.pauseScreenOn = 0;
+
 //Hp Upgrades
 global.hpUnlocked1 = false;
 global.hpUnlocked2 = false;
@@ -104,6 +109,7 @@ global.hpUnlocked17 = false;
 global.hpUnlocked18 = false;
 global.hpUnlocked19 = false;
 global.hpUnlocked20 = false;
+
 //Tomes
 global.tome1Unlocked = false;
 global.tome2Unlocked = false;
@@ -115,6 +121,7 @@ global.tome7Unlocked = false;
 global.tome8Unlocked = false;
 global.tome9Unlocked = false;
 global.tome10Unlocked = false;
+
 //Collectibles
 global.money = 0;
 
@@ -124,11 +131,13 @@ global.weatherRainingHard = false;
 global.weatherSnowing = false;
 global.weatherSnowingHard = false;
 global.light = noone;
+
 //Pause Menu
 global.upgradesGotten = 0;
 global.heartsGotten = 0;
 global.tomesGotten = 0;
 global.bossesKilled = 0;
+
 //Status Effects
 global.statusBurning = false;
 global.statusPoison = false;
@@ -136,6 +145,7 @@ global.statusDazed = false;
 global.statusCursed = false;
 global.statusFrozen = false;
 global.statusSlowed = false;
+global.statusOrbCursed = false;
 global.statusEffects = 0;
 
 
@@ -157,6 +167,8 @@ global.haveSet4 = false;
 global.haveSet5 = false;
 global.haveSet6 = false;
 global.haveSet7 = false;
+global.haveSet8 = false;
+
 //Ore Mine
 global.inHotSpring = false;
 global.darknessLevel = 2;

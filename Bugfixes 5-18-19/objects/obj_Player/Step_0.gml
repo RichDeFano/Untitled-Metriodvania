@@ -1,6 +1,5 @@
 if !(instance_exists(obj_PlayerStatusAlarms))
 {instance_create_layer(x,y,"ObjOverPlayer",obj_PlayerStatusAlarms);}
-
 ///scr_AllKeysDefault();
 scr_gainJump();
 ///scr_Death();

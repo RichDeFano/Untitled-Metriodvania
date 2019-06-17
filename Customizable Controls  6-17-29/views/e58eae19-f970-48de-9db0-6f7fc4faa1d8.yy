@@ -1,0 +1,28 @@
+{
+    "id": "e58eae19-f970-48de-9db0-6f7fc4faa1d8",
+    "modelName": "GMFolder",
+    "mvc": "1.1",
+    "name": "e58eae19-f970-48de-9db0-6f7fc4faa1d8",
+    "children": [
+        "b62a4541-5aba-43ea-bc42-ee47971729f5",
+        "b423d544-d734-4e44-a15d-fddbfe9342df",
+        "e1cc901c-ad8e-4645-9108-74627ad4fce3",
+        "36963c28-4df1-488e-83ca-0bac925cbd05",
+        "9e18a8ae-e3bc-4f6a-9765-250b6c2861f9",
+        "8f95d4ed-c6d5-4873-a6af-5f7a04f55e6a",
+        "2c009f70-ddad-4443-9f66-acbbc78fcd75",
+        "3f3ee28e-4ee7-4bb6-a053-2c11ab97878f",
+        "111c2728-b37e-4db8-8d77-0c665fd6284b",
+        "942073ef-4643-444c-ad45-95cd11565a9b",
+        "69e387ba-d3cb-4cfc-9fc7-2143edbf6dfc",
+        "33a52512-5cf1-401d-a802-4da4dfbe9d99",
+        "af6400b7-4579-4d43-8456-12f7c55d5ae9",
+        "07323ff2-ba09-43a6-b424-8270f04fdc1a",
+        "45e5e138-e568-418e-ba0d-d5c56b395589",
+        "ba29bce7-3978-4c72-abd2-d91c96f15263"
+    ],
+    "filterType": "GMSprite",
+    "folderName": "Game Sprites",
+    "isDefaultView": false,
+    "localisedFolderName": ""
+}

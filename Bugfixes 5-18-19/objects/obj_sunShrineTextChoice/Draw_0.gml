@@ -3,7 +3,7 @@
 event_inherited();
 
 draw_self();
-draw_set_font(global.Font);
+//draw_set_font(global.Font);
 
 if (option[i] = "Movement")
 {
