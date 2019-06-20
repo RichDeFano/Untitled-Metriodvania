@@ -1,5 +1,5 @@
 ---------------------------------NEEDED FOR ENGINE------------------------------------------------------------------------------
-
+Dungeon Tools: Menu System > World Building > World Populating > Story > Graphics > Music > BETA RELEASE
 
 ------------------------------------------------------------------------------
 BUGS:
@@ -8,22 +8,22 @@ BUGS:
 	counter shouldnt activate on initial click
 
 ------------------------------------------------------------------------------
+DUNGEONs:
+	STATUS: INCOMPLETE
+		--Needed:
+		Key/Door system for different dungeons
+		Boss Key(dropped by miniboss)
+------------------------------------------------------------------------------
 SAVE SYSTEM:
-		--Needed
-			-Saving game data
-			-Menu Screen/Loading data
-				-encrypting save files if the output is just text
+		--ADDED: JSON System. STATUS: INCOMPLETE
+			-Needed
+				choosing different saves from menu(global.onSave)
 ------------------------------------------------------------------------------
 BOSS FIGHTS:
-		--Needed
-			Boss attack patterns
-			Openings to hit them for large dmg?
-			bottom of screen health bar
+	--ADDED: obj_bossParent. STATUS: COMPLETE
 ------------------------------------------------------------------------------
 ENEMIES:
-	--ADDED: obj_enemyParent. STATUS: INCOMPLETE
-		--Needed
-		-Enemies attacking back
+	--ADDED: obj_enemyParent. STATUS: COMPLETE
 ------------------------------------------------------------------------------
 TEXT ENGINE:
 	--ADDED: Text Engine. STATUS: Complete, extendable	
