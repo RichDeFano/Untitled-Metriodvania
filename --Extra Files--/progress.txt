@@ -1,11 +1,24 @@
 ---------------------------------NEEDED FOR ENGINE------------------------------------------------------------------------------
 Dungeon Tools: Menu System > World Building > World Populating > Story > Graphics > Music > BETA RELEASE
 
+minimap scrolling
+mini bosses
+3 save file menu
+changing bird color
+
+combat
+	sword charge ability for sun/moon swords
+	moon = faster swings with bit on them?
+	sun - fire sword that leaves dot
+	
+	crouch stab/up swing on ground
+	cant parry in air
 ------------------------------------------------------------------------------
 BUGS:
 	Can read right after you just read or while jumping. messes with dialouge
 	need to check gamepad before updating in counter
 	counter shouldnt activate on initial click
+	text can go outside of the text box
 
 ------------------------------------------------------------------------------
 DUNGEONs:
@@ -18,6 +31,7 @@ SAVE SYSTEM:
 		--ADDED: JSON System. STATUS: INCOMPLETE
 			-Needed
 				choosing different saves from menu(global.onSave)
+				restarting you in room of last save
 ------------------------------------------------------------------------------
 BOSS FIGHTS:
 	--ADDED: obj_bossParent. STATUS: COMPLETE
