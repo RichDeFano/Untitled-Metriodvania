@@ -1,5 +1,5 @@
 ---------------------------------NEEDED FOR ENGINE------------------------------------------------------------------------------
-
+Dungeon Tools: Menu System > World Building > World Populating > Story > Graphics > Music > BETA RELEASE
 
 ------------------------------------------------------------------------------
 BUGS:
@@ -8,22 +8,22 @@ BUGS:
 	counter shouldnt activate on initial click
 
 ------------------------------------------------------------------------------
+DUNGEONs:
+	STATUS: INCOMPLETE
+		--Needed:
+		Key/Door system for different dungeons
+		Boss Key(dropped by miniboss)
+------------------------------------------------------------------------------
 SAVE SYSTEM:
-		--Needed
-			-Saving game data
-			-Menu Screen/Loading data
-				-encrypting save files if the output is just text
+		--ADDED: JSON System. STATUS: INCOMPLETE
+			-Needed
+				choosing different saves from menu(global.onSave)
 ------------------------------------------------------------------------------
 BOSS FIGHTS:
-		--Needed
-			Boss attack patterns
-			Openings to hit them for large dmg?
-			bottom of screen health bar
+	--ADDED: obj_bossParent. STATUS: COMPLETE
 ------------------------------------------------------------------------------
 ENEMIES:
-	--ADDED: obj_enemyParent. STATUS: INCOMPLETE
-		--Needed
-		-Enemies attacking back
+	--ADDED: obj_enemyParent. STATUS: COMPLETE
 ------------------------------------------------------------------------------
 TEXT ENGINE:
 	--ADDED: Text Engine. STATUS: Complete, extendable	
@@ -64,12 +64,7 @@ Room Darkness
 	--ADDED: con_lightManager STATUS: COMPLETE
 ------------------------------------------------------------------------------
 UPGRADES(Sun and Moon):
-<<<<<<< HEAD:--Extra Files--/textDump.txt
-	--ADDED: Shrine System STATUS: Incomplete
-		--Talking or interacting with shrine pulls up menu to select, otherwise isnt there
-=======
 	--ADDED: Shrine System STATUS: COMPLETE
->>>>>>> a78cf367069410a099d6a00a838836b330131fde:progress.txt
 ------------------------------------------------------------------------------
 Status Effects:
 	--ADDED Status Effects STATUS: COMPLETE
@@ -77,6 +72,14 @@ Status Effects:
 COMBAT:
 	--ADDED: Sword Mechanics. STATUS: COMPLETE(until real sprites/armor abilities)
 ------------------------------------------------------------------------------
-
+TOMES:
+	--ADDED: 10 collectible tomes. STATUS: COMPLETE
+------------------------------------------------------------------------------
+HEART CONTAINERS:
+	--ADDED: 20 collectible heart containers. STATUS: COMPLETE
+------------------------------------------------------------------------------
+UPGRADES(Character)
+	--Added: 10 collectible upgrades. STATUS: COMPLETE
+------------------------------------------------------------------------------
 
 
