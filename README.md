@@ -11,8 +11,3 @@ try out a version, and try to keep that as updated as possible.
 
 The game is still in the engine stages. Once a few more big tasks can be added, the game will have the ability to gain new content rapidly
 and that is when areas/bosses/story will start to come together in a playable state.
-
-Tasks needed to complete engine
--In depth combat/enemy design
--Boss design
--Save System.
