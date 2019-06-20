@@ -266,7 +266,17 @@ All upgrades = 14?
 			myTextBox.name = "Ancient Upgrade";
 		}
 	}
-
+//////////////KEYS
+else if (upgradenumber == 108)	
+	{
+		if (myTextBox = noone)
+		{
+			myTextBox = instance_create_layer(x,y,"Text",obj_TextBox); 
+			myTextBox.text[0] = "You found a Key! It can only be used in this dungeon.";
+			myTextBox.creator = self;
+			myTextBox.name = "Dungeon Key";
+		}
+	}
 
 
 	
