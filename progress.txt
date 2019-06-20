@@ -1,0 +1,82 @@
+---------------------------------NEEDED FOR ENGINE------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------
+BUGS:
+	Can read right after you just read or while jumping. messes with dialouge
+	need to check gamepad before updating in counter
+	counter shouldnt activate on initial click
+
+------------------------------------------------------------------------------
+SAVE SYSTEM:
+		--Needed
+			-Saving game data
+			-Menu Screen/Loading data
+				-encrypting save files if the output is just text
+------------------------------------------------------------------------------
+BOSS FIGHTS:
+		--Needed
+			Boss attack patterns
+			Openings to hit them for large dmg?
+			bottom of screen health bar
+------------------------------------------------------------------------------
+ENEMIES:
+	--ADDED: obj_enemyParent. STATUS: INCOMPLETE
+		--Needed
+		-Enemies attacking back
+------------------------------------------------------------------------------
+TEXT ENGINE:
+	--ADDED: Text Engine. STATUS: Complete, extendable	
+		--Needed
+		  Ability to freely use colored text	
+		  Ability to use different fonts at one time(shaky font, small font)	
+------------------------------------------------------------------------------
+HEALTH AND LIVES:
+	--ADDED: Custom HP Bar. STATUS: Incomplete
+		--Needed
+		  dying = restart from last save?
+------------------------------------------------------------------------------
+Pause menus for world map, upgrades/progress/options
+	--ADDED: GUI Menu. STATUS: Incomplete
+		--Needed
+		Settings Page
+		Scrolling map on menu?
+------------------------------------------------------------------------------
+Controller Support
+	--ADDED: Customizable, With Gamepad Support. STATUS: COMPLETE
+------------------------------------------------------------------------------
+Save Warps:
+	--ADDED: AUS/metroidvania style save warps. STATUS: COMPLETE
+------------------------------------------------------------------------------
+Weather Controls
+	--ADDED: con_weatherManager STATUS: COMPLETE
+------------------------------------------------------------------------------
+Slopes
+	--ADDED: obj_slope STATUS: COMPLETE :)
+------------------------------------------------------------------------------
+Jumpthrough Platforms
+	--ADDED: obj_wallJT STATUS: COMPLETE
+------------------------------------------------------------------------------
+Room Exploration
+	--ADDED: obj_roomTransition/obj_zoneTransition STATUS: COMPLETE
+------------------------------------------------------------------------------
+Room Darkness
+	--ADDED: con_lightManager STATUS: COMPLETE
+------------------------------------------------------------------------------
+UPGRADES(Sun and Moon):
+<<<<<<< HEAD:--Extra Files--/textDump.txt
+	--ADDED: Shrine System STATUS: Incomplete
+		--Talking or interacting with shrine pulls up menu to select, otherwise isnt there
+=======
+	--ADDED: Shrine System STATUS: COMPLETE
+>>>>>>> a78cf367069410a099d6a00a838836b330131fde:progress.txt
+------------------------------------------------------------------------------
+Status Effects:
+	--ADDED Status Effects STATUS: COMPLETE
+------------------------------------------------------------------------------
+COMBAT:
+	--ADDED: Sword Mechanics. STATUS: COMPLETE(until real sprites/armor abilities)
+------------------------------------------------------------------------------
+
+
+

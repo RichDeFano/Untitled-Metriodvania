@@ -1,7 +1,7 @@
 
 
 room_speed = 60;
-scr_roomSetup("TestZone",3,3,true,false);
+scr_roomSetup("TestZone",3,3,false,true);
 /*
 global.gridX = 3;
 global.gridY = 3;

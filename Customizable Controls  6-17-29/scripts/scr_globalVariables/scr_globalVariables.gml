@@ -23,7 +23,16 @@ global.destX = 0;
 global.destY = 0;
 global.showZone = false;
 global.testVar = 0;
+global.saveOn = 0;
 
+//Boss Stuff
+global.inFight = false;
+
+//global.bossDefeated1 = false;
+global.bossDefeated2 = false;
+global.bossDefeated3 = false;
+global.bossDefeated4 = false;
+global.bossDefeated5 = false;
 //Ability Unlocks
 global.dodgeUnlocked = true;
 global.wallJumpUnlocked = true;
@@ -62,6 +71,8 @@ global.sunOrb3Unlocked = false;
 global.isSave = false;
 global.isBoss = false;
 global.isBossCleared = false;
+global.lastRoomInX = 0;
+global.lastRoomInY = 0;
 global.mmX = 0;
 global.mmY = 0;
 global.mmX2 = 0;
