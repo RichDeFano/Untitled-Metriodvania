@@ -18,6 +18,9 @@ BUGS:
 	Can read right after you just read or while jumping. messes with dialouge
 	counter shouldnt activate on initial click
 	text can go outside of the text box
+	platforming can get stuck(exp moving platforms)
+	dashing while status effects
+	teleporting while in Gemstone doesnt work
 
 ------------------------------------------------------------------------------
 DUNGEONs:
@@ -30,7 +33,6 @@ SAVE SYSTEM:
 		--ADDED: JSON System. STATUS: INCOMPLETE
 			-Needed
 				choosing different saves from menu(global.onSave)
-				restarting you in room of last save
 ------------------------------------------------------------------------------
 BOSS FIGHTS:
 	--ADDED: obj_bossParent. STATUS: COMPLETE
