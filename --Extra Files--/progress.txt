@@ -16,10 +16,8 @@ combat
 ------------------------------------------------------------------------------
 BUGS:
 	Can read right after you just read or while jumping. messes with dialouge
-	need to check gamepad before updating in counter
 	counter shouldnt activate on initial click
 	text can go outside of the text box
-	keys arent saved correctly(use a ds_list instead)
 
 ------------------------------------------------------------------------------
 DUNGEONs:
