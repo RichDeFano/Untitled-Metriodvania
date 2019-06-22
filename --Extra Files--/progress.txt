@@ -19,14 +19,12 @@ BUGS:
 	text can go outside of the text box
 	platforming can get stuck(exp moving platforms)
 	dashing while status effects
-	teleporting while in Gemstone doesnt work
 
 ------------------------------------------------------------------------------
-DUNGEONs:
+DUNGEONS:
 	STATUS: INCOMPLETE
 		--Needed:
-		Key/Door system for different dungeons
-		Boss Key(dropped by miniboss)
+			Miniboss/Saving miniboss Status
 ------------------------------------------------------------------------------
 SAVE SYSTEM:
 		--ADDED: JSON System. STATUS: INCOMPLETE
