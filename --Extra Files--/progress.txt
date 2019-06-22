@@ -12,7 +12,6 @@ combat
 	sun - fire sword that leaves dot
 	
 	crouch stab/up swing on ground
-	cant parry in air
 ------------------------------------------------------------------------------
 BUGS:
 	Can read right after you just read or while jumping. messes with dialouge
