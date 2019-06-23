@@ -1,5 +1,5 @@
 ---------------------------------NEEDED FOR ENGINE------------------------------------------------------------------------------
-Dungeon Tools: Menu System > World Building > World Populating > Story > Graphics > Music > BETA RELEASE
+Menu System > Combat System/character Sprites > World Building > World Populating > Story > Graphics > Music > BETA RELEASE
 
 
 3 save file menu
@@ -18,6 +18,10 @@ BUGS:
 	text can go outside of the text box
 	platforming can get stuck(exp moving platforms)
 	dashing while status effects
+	sometimes canteleport doesnt reactivate
+	teleport sprite is a little offset
+	save particle looks bad
+	countering instead of saving
 ------------------------------------------------------------------------------
 DUNGEONS:
 	STATUS: COMPLETE
