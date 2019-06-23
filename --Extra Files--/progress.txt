@@ -1,8 +1,7 @@
 ---------------------------------NEEDED FOR ENGINE------------------------------------------------------------------------------
 Dungeon Tools: Menu System > World Building > World Populating > Story > Graphics > Music > BETA RELEASE
 
-minimap scrolling
-mini bosses
+
 3 save file menu
 changing bird color
 
@@ -19,12 +18,9 @@ BUGS:
 	text can go outside of the text box
 	platforming can get stuck(exp moving platforms)
 	dashing while status effects
-
 ------------------------------------------------------------------------------
 DUNGEONS:
-	STATUS: INCOMPLETE
-		--Needed:
-			Miniboss/Saving miniboss Status
+	STATUS: COMPLETE
 ------------------------------------------------------------------------------
 SAVE SYSTEM:
 		--ADDED: JSON System. STATUS: INCOMPLETE
@@ -44,15 +40,12 @@ TEXT ENGINE:
 		  Ability to use different fonts at one time(shaky font, small font)	
 ------------------------------------------------------------------------------
 HEALTH AND LIVES:
-	--ADDED: Custom HP Bar. STATUS: Incomplete
-		--Needed
-		  dying = restart from last save?
+	--ADDED: Feather HP Bar/Game Over. STATUS: COMPLETE
 ------------------------------------------------------------------------------
 Pause menus for world map, upgrades/progress/options
 	--ADDED: GUI Menu. STATUS: Incomplete
 		--Needed
-		Settings Page
-		Scrolling map on menu?
+		Settings Page > video/audio settings
 ------------------------------------------------------------------------------
 Controller Support
 	--ADDED: Customizable, With Gamepad Support. STATUS: COMPLETE
