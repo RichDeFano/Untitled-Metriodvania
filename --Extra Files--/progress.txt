@@ -1,69 +1,49 @@
 ---------------------------------NEEDED FOR ENGINE------------------------------------------------------------------------------
 Menu System > Combat System/character Sprites > World Building > World Populating > Story > Graphics > Music > BETA RELEASE
 
-Go further with grappling hook, could be really cool combat wise 
+$20 game, $10 release special?
 
-$20 game, $10 release special 
-
+----Combat Ideas----
 Fast paced combo, enemies have multiple directional attacks(if you dash they might swing around their back)
-
 Strong enemies punish basic player mistakes 
-
 Attacks are fast
-
 Should feel like dodging in and out of range to exchange a hit with enemy while they have frame cooldowns,
-
 Npc enemies could ramp up/have ranks shown by a badge or armor trim or something
-
 -one that runs at you and dash attack swipes every time is easy to beat 
 -next rank up might protect himself by swinging around in a ganondorf swipe
 -next rank might feighnt a dash and swipe you in the air
-
 Flurry rush?
 
-Hookshot with enemies 
-
+----Hookshot Ideas----
+Go further with grappling hook, could be really cool combat wise 
 If hookshot always pulls you vs getting to grappling hook with it 
 Grappling hook for platform /level design, could be a cool mechanic 
-
 Trigger holds the hook, gamepad or mouse directs it. Holding trigger pulls you in hookshot style, otherwise it just latches to the wall and is a swing
-
 Swing should save momentum from whether you are moving or not, also be hard to build up swing 
-
 swing is released by jump or dash into those mechanics 
-
 Have to drop down spikes rope style, then swing up to a ledge or up a walljump corridor with some spikes
-
 Walljump beats rope in things like MegaMan, the closing room. 
-
 Might make jumpblocks semi obsolete unless Incorporated in long swings with no surface or up places you can't grapple or wallclimb 
-
+faint shield glow around character showing general direction
+affected by special charge
+	fire or lightning trail, one shocks(mini stuns) one does dot
+	sword upgrade renamed weapon
+---Area: Falcons Den---
 Falcons den, has long section to pass 
 Since late game, you will have most everything 
-
 Mountain range with long drops, need hook to climb. Aus mountain good example 
 Not many secrets, not many saves, kinda ass.
 
 
-
 Map "changes" shown by blinking cursor over it 
-
-Zone 3 = rope playground, after boss 1 defeat open and show on map
-
+Zone 3 = rope playground for now, label or start working on a falcons den?, after boss 1 defeat open and show on map
 Make zone 3 through a portal from the one empty testroom, a way blinks when open 
 
 3 save file menu
 changing bird color
 
-grappling hook - combat item
-if pressed and held, jump to end hookshot style
-if pressed and released, use as ropeswing
-bounce off walls if hit too hard
-angle of animation is angle of rope
-faint shield glow around character showing general direction
-affected by special charge
-	fire or lightning trail, one shocks(mini stuns) one does dot
-sword upgrade renamed weapon
+
+
 combat
 	sword charge ability for sun/moon swords
 	moon = faster swings with bit on them?
