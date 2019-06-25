@@ -5,12 +5,22 @@ Menu System > Combat System/character Sprites > World Building > World Populatin
 3 save file menu
 changing bird color
 
+grappling hook - combat item
+if pressed and held, jump to end hookshot style
+if pressed and released, use as ropeswing
+bounce off walls if hit too hard
+angle of animation is angle of rope
+faint shield glow around character showing general direction
+affected by special charge
+	fire or lightning trail, one shocks(mini stuns) one does dot
+sword upgrade renamed weapon
 combat
 	sword charge ability for sun/moon swords
 	moon = faster swings with bit on them?
 	sun - fire sword that leaves dot
 	
 	crouch stab/up swing on ground
+	movement acceleration/deceleration?
 ------------------------------------------------------------------------------
 BUGS:
 	Can read right after you just read or while jumping. messes with dialouge
