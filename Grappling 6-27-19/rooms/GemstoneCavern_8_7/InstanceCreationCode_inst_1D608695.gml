@@ -1,0 +1,1 @@
+myroomGoto = GemstoneCavern_7_7;

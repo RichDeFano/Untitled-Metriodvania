@@ -25,13 +25,8 @@ var i = 0;
 
 //Gemstone Cavern
 global.moonD1KTotal = 2;
-global.moonDungeon1BossKey = 0;
-global.moonDungeon1BossDoor = 0;
-for (i = 0; i < global.moonD1KTotal; i++)
-{
-	global.moonDungeon1Keys[i] = 0;
-	global.moonDungeon1Doors[i] = 0;
-}
+global.teleportZone = "TestZone";
+global.debugNumb = 0;
 
 
 /////////
@@ -71,7 +66,7 @@ global.inText = false;
 global.pause = false;
 global.atShrine = false;
 global.canInteractShrine = false;
-
+global.canteleport = false;
 
 //Map and Movement
 global.zone = "";

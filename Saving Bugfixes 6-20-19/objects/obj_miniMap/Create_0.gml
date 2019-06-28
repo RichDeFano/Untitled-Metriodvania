@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+global.debugNumb++;
 display_set_gui_size(640,480);
 //display_set_gui_maximise(2,2,0,0);
 scr_buttonMovement();

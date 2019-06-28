@@ -100,18 +100,46 @@ global.rStr = _map[? "73"];
 //Map Location
 global.lastRoomInY = _map[? "74"];
 global.lastRoomInX = _map[? "75"];
+global.zone = _map[? "81"];
 
-//Gemstone Cavern Keys
+//Gemstone Cavern Boss Key/Door
 global.moonDungeon1BossKey = _map[? "76"];
 global.moonDungeon1BossDoor= _map[? "77"];
-global.moonDungeon1Keys = _map[? "78"];
-global.moonDungeon1Doors = _map[? "79"];
+
+//Gemstone Cavern Keys and Doors
+var tempKey = _map[? "78"];
+if (ds_map_exists(_map,"78"))
+{
+	var tempKeyList = ds_list_create();
+	ds_list_read(tempKeyList, tempKey);
+	var size = ds_list_size(tempKeyList);
+	for (var g = 0; g < size; g++)
+	{
+		var newValue = ds_list_find_value(tempKeyList,g);
+		global.moonDungeon1Keys[g] = newValue;
+	}
+}
+
+var tempDoor = _map[? "79"];
+if (ds_map_exists(_map,"79"))
+{
+	var tempDoorList = ds_list_create();
+	ds_list_read(tempDoorList, tempDoor);
+	var size = ds_list_size(tempDoorList);
+	for (var f = 0; f < size; f++)
+	{
+		var newValue = ds_list_find_value(tempDoorList,f);
+		global.moonDungeon1Doors[f] = newValue;
+	}
+}
+
+//global.moonDungeon1Doors = _map[? "79"];
 
 //Minimap Data
 var tempDS = _map[? "80"];
 if (ds_map_exists(_map,"80"))
 {
-	var tempGrid = ds_grid_create(29,33);
+	var tempGrid = ds_grid_create(33,29);
 	ds_grid_read(tempGrid,tempDS);
 	global.mapGrid = scr_loadMiniMap(tempGrid);
 }
@@ -218,15 +246,19 @@ global.rStr = "S";
 global.money = 0;
 
 //map
-global.lastRoomInY = 1;
-global.lastRoomInX = 1;
+global.lastRoomInY = 3;
+global.lastRoomInX = 3;
+global.zone = "TestZone";
 
 
-//Gemstone Cavern Keys
+//Gemstone Cavern Keys and Doors
 global.moonDungeon1BossKey = 0;
-global.moonDungeon1BossDoor= 0;
-global.moonDungeon1Keys = 0;
-global.moonDungeon1Doors = 0;
+global.moonDungeon1BossDoor = 0;
+for (i = 0; i < global.moonD1KTotal; i++)
+{
+	global.moonDungeon1Keys[i] = 0;
+	global.moonDungeon1Doors[i] = 0;
+}
 
 //Minimap Data
 for (var i = 0; i <= 29; i++) ////I = Y = 5 Rows
