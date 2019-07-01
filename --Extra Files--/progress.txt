@@ -32,6 +32,16 @@ BUGS:
 	teleport sprite is a little offset
 	save particle looks bad
 	countering instead of saving
+	still throw out pad if you instant cancel dash
+	can save a bunch in a row
+	moving platforms are weird from below
+	map not updated for secret room
+	
+	platforms:
+	riding on top seems to be ok, a little shaky
+	jumping on the bottom will get you stuck and taken for the ride
+	jumping on the sides seems to be okay
+	you can "stop a platform which will freeze it, and then it will jump to where its supposed to be.
 ------------------------------------------------------------------------------
 HOOKSHOT/GRAPPLING HOOK:
 	STATUS: COMPLETE
