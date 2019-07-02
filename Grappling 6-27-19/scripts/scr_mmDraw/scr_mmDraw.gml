@@ -37,7 +37,7 @@ offsetY =  ycreate -(15*global.mapOffsetY) ; //64
 				}
 			else
 				{
-				draw_sprite(spr_mmHide,image_speed,offsetX+ 15*(j)-30, offsetY + 15*(i)-30);// 15 = offset from border
+				//draw_sprite(spr_mmHide,image_speed,offsetX+ 15*(j)-30, offsetY + 15*(i)-30);// 15 = offset from border
 				}
 				
 		}

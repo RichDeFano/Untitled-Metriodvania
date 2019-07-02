@@ -21,7 +21,8 @@
         "45e5e138-e568-418e-ba0d-d5c56b395589",
         "ba29bce7-3978-4c72-abd2-d91c96f15263",
         "29aa093d-d821-4759-9e7f-56fcb24e5f06",
-        "fb29bfed-accb-4e65-8651-bf4b536ed3fd"
+        "fb29bfed-accb-4e65-8651-bf4b536ed3fd",
+        "bdfc9995-a71d-4243-acc3-557d4cdc399f"
     ],
     "filterType": "GMSprite",
     "folderName": "Game Sprites",
