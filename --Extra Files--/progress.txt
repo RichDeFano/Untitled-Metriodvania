@@ -24,16 +24,9 @@ combat
 ------------------------------------------------------------------------------
 BUGS:
 	Can read right after you just read or while jumping. messes with dialouge
-	counter shouldnt activate on initial click
 	text can go outside of the text box
 	dashing while status effects
-	sometimes canteleport doesnt reactivate
-	teleport sprite is a little offset
-	save particle looks bad
-	countering instead of saving
-	still throw out pad if you instant cancel dash
-	can save a bunch in a row
-	map not updated for secret room
+	hard to tell if
 
 ------------------------------------------------------------------------------
 HOOKSHOT/GRAPPLING HOOK:
