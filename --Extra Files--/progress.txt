@@ -24,16 +24,13 @@ combat
 ------------------------------------------------------------------------------
 BUGS:
 	Can read right after you just read or while jumping. messes with dialouge
-	counter shouldnt activate on initial click
 	text can go outside of the text box
 	dashing while status effects
-	sometimes canteleport doesnt reactivate
-	teleport sprite is a little offset
-	save particle looks bad
-	countering instead of saving
-	still throw out pad if you instant cancel dash
-	can save a bunch in a row
-	map not updated for secret room
+	hookshot is messy if too long/swinging
+	should auto cancel if youre on the ground?
+	cant tell if youre at shrine or not, should have its own sprite
+	if you hit the ground and your mask is rotated it will put you in the ground
+	fixes could be drawing a second mask to check for bottom collisions?
 
 ------------------------------------------------------------------------------
 HOOKSHOT/GRAPPLING HOOK:
