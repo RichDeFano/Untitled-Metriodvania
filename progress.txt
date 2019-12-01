@@ -64,12 +64,7 @@ Room Darkness
 	--ADDED: con_lightManager STATUS: COMPLETE
 ------------------------------------------------------------------------------
 UPGRADES(Sun and Moon):
-<<<<<<< HEAD:--Extra Files--/textDump.txt
-	--ADDED: Shrine System STATUS: Incomplete
-		--Talking or interacting with shrine pulls up menu to select, otherwise isnt there
-=======
 	--ADDED: Shrine System STATUS: COMPLETE
->>>>>>> a78cf367069410a099d6a00a838836b330131fde:progress.txt
 ------------------------------------------------------------------------------
 Status Effects:
 	--ADDED Status Effects STATUS: COMPLETE
