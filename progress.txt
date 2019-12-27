@@ -15,6 +15,11 @@ BUGS:
 	hookshot doesnt attach if it hits a platform pre where its supposed to be
 	cave might be too dark
 	room transitions have draw issues, old map flashes on screen
+	swinging sword while on hookshot
+	
+	get rid of zed shadow - too clunky?
+	cant tell if hookshot holds momentum or not
+	having hookshot fail if its below a certain angle, or drag you on the ground?
 	
 ------------------------------------------------------------------------------
 SAVE SYSTEM:
