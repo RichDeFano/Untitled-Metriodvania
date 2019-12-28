@@ -8,9 +8,8 @@ BUGS:
 	counter shouldnt activate on initial click
 	
 	teleporting from map doesnt auto load up map screen
-	light is cut on the edges of map when moving
 	text popups should be above the light
-	map screen doesnt move correctly, bottom right is cut off
+	map screen doesnt move correctly, bottom right is cut off - might be a resolution issue?
 	hookshot doesnt attach if it hits a platform pre where its supposed to be
 	cave might be too dark
 	room transitions have draw issues, old map flashes on screen
