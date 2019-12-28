@@ -11,8 +11,8 @@ BUGS:
 	text popups should be above the light
 	map screen doesnt move correctly, bottom right is cut off - might be a resolution issue?
 	hookshot doesnt attach if it hits a platform pre where its supposed to be
-	cave might be too dark
-	room transitions have draw issues, old map flashes on screen
+	cave might be too dark - need light from enemies, lava, gems, etc.
+	room transitions have draw issues, old screen flashes on screen
 	swinging sword while on hookshot
 	
 	get rid of zed shadow - too clunky?
