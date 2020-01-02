@@ -7,13 +7,18 @@ BUGS:
 	need to check gamepad before updating in counter
 	counter shouldnt activate on initial click
 	
-	teleporting from map doesnt auto load up map screen
 	text popups should be above the light
-	map screen doesnt move correctly, bottom right is cut off - might be a resolution issue?
 	hookshot doesnt attach if it hits a platform pre where its supposed to be
-	cave might be too dark - need light from enemies, lava, gems, etc.
 	room transitions have draw issues, old screen flashes on screen
 	swinging sword while on hookshot
+	
+	
+	check on desktop post break
+	--
+	map screen doesnt move correctly, bottom right is cut off - might be a resolution issue?
+
+	cave might be too dark - need light from enemies, lava, gems, etc. darkest setting should be set according to brightness of 		screen?
+	--
 	
 	get rid of zed shadow - too clunky?
 	cant tell if hookshot holds momentum or not
