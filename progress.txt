@@ -11,6 +11,9 @@ BUGS:
 	hookshot doesnt attach if it hits a platform pre where its supposed to be
 	room transitions have draw issues, old screen flashes on screen
 	swinging sword while on hookshot
+	Upgrade counter on menu says 9/10 when at 10/10
+	minimap can start too close to border
+	minimap doesnt always start in same spot
 	
 	
 	check on desktop post break
@@ -56,7 +59,7 @@ HEALTH AND LIVES:
 Pause menus for world map, upgrades/progress/options
 	--ADDED: GUI Menu. STATUS: Incomplete
 		--Needed
-		Settings Page
+		Settings Page - audio and visual settings
 		Scrolling map on menu?
 ------------------------------------------------------------------------------
 Controller Support
