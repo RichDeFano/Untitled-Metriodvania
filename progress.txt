@@ -30,6 +30,13 @@ BUGS:
 	hookshot can not connect if the player is moving while shooting
 	opening menu when money is coming at you causes break
 	
+	image angle not changing on slopes - cant break collision
+	throwing pad on a slope - kind of blocky?
+	
+	shadow hookshot needs to show on wall where its attached 
+	maybe show the player what they will be doing(aka falling/wall jumping, swinging)
+	thrown hookshot needs to fall to a platform - cant suspend in air
+	
 ------------------------------------------------------------------------------
 SAVE SYSTEM:
 		--Needed
