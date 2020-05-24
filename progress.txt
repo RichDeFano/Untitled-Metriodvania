@@ -23,9 +23,12 @@ BUGS:
 	cave might be too dark - need light from enemies, lava, gems, etc. darkest setting should be set according to brightness of 		screen?
 	--
 	
-	get rid of zed shadow - too clunky?
+	
 	cant tell if hookshot holds momentum or not
 	having hookshot fail if its below a certain angle, or drag you on the ground?
+	hookshot can be quickly shot off twice
+	hookshot can not connect if the player is moving while shooting
+	opening menu when money is coming at you causes break
 	
 ------------------------------------------------------------------------------
 SAVE SYSTEM:
