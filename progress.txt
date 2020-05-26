@@ -6,7 +6,6 @@ BUGS:
 	Can read right after you just read or while jumping. messes with dialouge
 	need to check gamepad before updating in counter
 	counter shouldnt activate on initial click
-	
 	text popups should be above the light
 	hookshot doesnt attach if it hits a platform pre where its supposed to be
 	room transitions have draw issues, old screen flashes on screen
