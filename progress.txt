@@ -2,32 +2,32 @@
 
 
 ------------------------------------------------------------------------------
-BUGS:
-	Can read right after you just read or while jumping. messes with dialouge
+
 	need to check gamepad before updating in counter
 	counter shouldnt activate on initial click
 	text popups should be above the light
 	hookshot doesnt attach if it hits a platform pre where its supposed to be
 	room transitions have draw issues, old screen flashes on screen
-	swinging sword while on hookshot
-	Upgrade counter on menu says 9/10 when at 10/10
-	minimap can start too close to border
-	minimap doesnt always start in same spot
+	opening menu when money is coming at you causes break
+	//swinging sword while on hookshot
+	//Upgrade counter on menu says 9/10 when at 10/10
 	
 	
-	check on desktop post break
-	--
-	map screen doesnt move correctly, bottom right is cut off - might be a resolution issue?
+	minimap can start too close to border - if x/y is past the movement ones
 
-	cave might be too dark - need light from enemies, lava, gems, etc. darkest setting should be set according to brightness of 		screen?
+	
+	
+	**check on multiple resolution computers**
+	minimap doesnt always start in same spot
+	map screen doesnt move correctly, bottom right is cut off - might be a resolution issue?
+	cave might be too dark - need light from enemies, lava, gems, etc. darkest setting should be set according to brightness 	 of screen?
 	--
 	
 	
-	cant tell if hookshot holds momentum or not
+	//cant tell if hookshot holds momentum or not
 	having hookshot fail if its below a certain angle, or drag you on the ground?
 	hookshot can be quickly shot off twice
 	hookshot can not connect if the player is moving while shooting
-	opening menu when money is coming at you causes break
 	
 	image angle not changing on slopes - cant break collision
 	throwing pad on a slope - kind of blocky?
