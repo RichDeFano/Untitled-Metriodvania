@@ -10,4 +10,4 @@ a copy of Game Maker Studio 2, most likely needing the paid version as well. I w
 try out a version, and try to keep that as updated as possible.
 
 The game is still in the engine stages. Once a few more big tasks can be added, the game will have the ability to gain new content rapidly
-and that is when areas/bosses/story will start to come together in a playable state.
+and that is when areas/bosses/story will start to come together in a playable state. Progress.txt gives a slight rundown on some of the mechanics in the game. Currently, the two big hurdles involve making the combat feel smooth and interactive for the player, as well as balancing the armors around their playstyle.
