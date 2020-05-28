@@ -109,14 +109,13 @@ BUGS:
 	Hookshot fixes needed - 
 		fire on ground == hookshot, fire in the air == grappling?
 		player horizontal speed should be capped for movement, and then have a slightly higher cap for things like rope 
-		can spam click hookshot if it isnt going to make it
+		//can spam click hookshot if it isnt going to make it
 		player not moving in the center - causes hookshot from wall to right to fail, causes shadow disparity
 		clicking down doesnt give proper momentum
 		if platform moves out of range of x and y, the hookshot wont hit the bottom of moving platform correctly
 		no hookshot walls - different as no dash walls. need both.
 		hookshot is drawn super extended even on hit(its onlyif its below you though)
 	General -
-		teleporting should be an action like read or interact
-		should have its own graphics
+		theres a little fall after warping. might be fixed by moving sprite
 		
 
