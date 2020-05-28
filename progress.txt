@@ -95,7 +95,7 @@ BUGS:
 	
 	//cant tell if hookshot holds momentum or not
 	having hookshot fail if its below a certain angle, or drag you on the ground?
-	hookshot can be quickly shot off twice
+	//hookshot can be quickly shot off twice
 	hookshot can not connect if the player is moving while shooting
 	
 	image angle not changing on slopes - cant break collision
@@ -108,6 +108,8 @@ BUGS:
 	
 	Hookshot fixes needed - 
 		fire on ground == hookshot, fire in the air == grappling?
+		cap hookshot to always be above you?
+		cap only grappling to be above you?
 		player horizontal speed should be capped for movement, and then have a slightly higher cap for things like rope 
 		//can spam click hookshot if it isnt going to make it
 		player not moving in the center - causes hookshot from wall to right to fail, causes shadow disparity
