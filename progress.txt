@@ -38,6 +38,7 @@ HUD:
 ------------------------------------------------------------------------------
 Controller Support
 	--ADDED: Customizable, With Gamepad Support. STATUS: COMPLETE
+		-Could add controller "presets", default and then a few ones you can save
 ------------------------------------------------------------------------------
 Save Warps:
 	--ADDED: AUS/metroidvania style save warps. STATUS: COMPLETE
@@ -105,11 +106,12 @@ BUGS:
 	maybe show the player what they will be doing(aka falling/wall jumping, swinging)
 	thrown hookshot needs to fall to a platform - cant suspend in air
 	
-	
-	Hookshot fixes needed - 
+	tomes are too high layered
+	Hookshot fixes needed -
 		fire on ground == hookshot, fire in the air == grappling?
-		cap hookshot to always be above you?
-		cap only grappling to be above you?
+		when the hookshot is shooting out, if it meets something before max range it must stop.
+			maybe get rid of max range, have it shoot out. hookshot would only shoot until button is released
+		shot should not be thought of as failed until it reaches the end
 		player horizontal speed should be capped for movement, and then have a slightly higher cap for things like rope 
 		//can spam click hookshot if it isnt going to make it
 		player not moving in the center - causes hookshot from wall to right to fail, causes shadow disparity
