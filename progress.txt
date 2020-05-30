@@ -64,11 +64,15 @@ UPGRADES(Sun and Moon):
 Status Effects:
 	--ADDED Status Effects STATUS: COMPLETE
 ------------------------------------------------------------------------------
-
-
-
-
-
+Momentum System:
+	--STATUS: INCOMPLETE
+		-Needed
+			dash + jump = longer jump
+			dash + jump off wall = longer wall jump
+			dash + jump off and back on = faster climb
+			dash + quickly press back = wavedash/backdash
+			hookshot needs a max speed
+			gravity needs a max speed 
 BUGS:
 
 ------------------------------------------------------------------------------
@@ -100,13 +104,7 @@ BUGS:
 	hookshot can not connect if the player is moving while shooting
 	
 	image angle not changing on slopes - cant break collision
-	throwing pad on a slope - kind of blocky?
-	
-	shadow hookshot needs to show on wall where its attached 
-	maybe show the player what they will be doing(aka falling/wall jumping, swinging)
-	thrown hookshot needs to fall to a platform - cant suspend in air
-	
-	tomes are too high layered
+
 	Hookshot fixes needed -
 		
 		player horizontal speed should be capped for movement, and then have a slightly higher cap for things like 			rope/big dash/wall dash. preserved between rooms
