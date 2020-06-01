@@ -107,12 +107,12 @@ BUGS:
 		room transitions have draw issues, old screen flashes on screen
 		opening menu when money is coming at you causes break
 		minimap can start too close to border - if x/y is past the movement ones
-		
+		dashing up slopes doesnt work
 		
 	Additions being worked on:
-		Dash jumping
-		wall slide momentum - up and down
-		wall dash jumping
+		//Dash jumping - might give too high of a jump
+		//wall dash jumping
+		wall slide momentum - up
 		integrate hookshot momentum
 		
 		
