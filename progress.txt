@@ -73,6 +73,16 @@ Momentum System:
 			dash + quickly press back = wavedash/backdash
 			hookshot needs a max speed
 			gravity needs a max speed 
+			sword while dashing? or speed up dash. dash speed could be like a roll
+------------------------------------------------------------------------------
+Physics System:
+	Ice - can slide through thin walls/into walls
+	Water
+	lava (platforms bubbling up), light boots let you walk slowly
+	slude/slowing materials
+	No climb walls
+	No hookshot walls
+	
 BUGS:
 
 ------------------------------------------------------------------------------
