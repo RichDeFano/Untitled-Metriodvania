@@ -34,7 +34,8 @@ if (key_ltr)
 	setupComplete = true;
 	//state = pState.swing;.
 	/////
-		countMax = (30*8)/w;
+		var wi = sprite_get_width(spr_hookChain);
+		countMax = (30*8)/wi;
 		destX = x + xx*countMax;
 		destY = y + yy*countMax;
 		var r = scr_collision_line_point(x, y, destX, destY, obj_wall, true, true);
