@@ -21,7 +21,8 @@
         "310872c7-2262-475d-9d4e-81b57e4b6a6d",
         "9255c1e4-320c-47eb-be17-29d35df6e172",
         "3857b256-7860-4958-838e-f0b95bf8c938",
-        "6a35024d-faf4-46e8-9d53-e3e5143c8525"
+        "6a35024d-faf4-46e8-9d53-e3e5143c8525",
+        "fff41be2-09ca-48ff-b2f4-fe0a1055537a"
     ],
     "IsDnD": false,
     "layers": [
@@ -56,8 +57,8 @@
             "name": "ObjOverPlayer",
             "id": "ff2df12b-e840-4fbf-8f0f-a6f2440542ba",
             "depth": 100,
-            "grid_x": 32,
-            "grid_y": 32,
+            "grid_x": 16,
+            "grid_y": 16,
             "hierarchyFrozen": false,
             "hierarchyVisible": true,
             "inheritLayerDepth": false,
@@ -65,7 +66,7 @@
             "inheritSubLayers": false,
             "inheritVisibility": false,
             "instances": [
-
+{"name": "inst_8BFF652","id": "fff41be2-09ca-48ff-b2f4-fe0a1055537a","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"imageIndex": 0,"imageSpeed": 1,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_8BFF652","objId": "019897b7-f8b1-4e7d-b2ff-2de48174466b","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.1","x": 560,"y": 144}
             ],
             "layers": [
 
