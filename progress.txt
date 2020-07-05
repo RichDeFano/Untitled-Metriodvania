@@ -1,8 +1,26 @@
 ---------------------------------NEEDED FOR ENGINE------------------------------------------------------------------------------
+Physics System:
+	--STATUS: INCOMPLETE
+	--ADDED: Ice, Water, Hookshot, Movement all share a common momentum. Dash jumping added.
+		Multiple types of terrain(slowing liquids, non climbable/hookshotable walls)
+		-Needed
+			dash + quickly press back = wavedash/backdash
+			hookshot needs a max speed 
+			sword while dashing? or speed up dash. dash speed could be like a roll
+			lava (platforms bubbling up), light boots let you walk slowly	
+			wall slide momentum - up if you have enough(expecially on ice)
+			
+		Water Stuff:
+			need wavy top of water, right now its just flat
+			need collision with water surface to cause ripples
+			Water jets(any angle?)
+				passable with dash/momentum vs non passable
+				can plug/turn off with rocks/switches/etc.
+------------------------------------------------------------------------------
 SAVE SYSTEM:
 	--ADDED: JSON File System
 		--Needed
-			-encrypting save files if the output is just text
+			-encrypting save files, not allowing players to open JSON
 ------------------------------------------------------------------------------				
 COMBAT:
 	--ADDED: Sword Mechanics. STATUS: INCOMPLETE
@@ -25,13 +43,13 @@ ENEMIES:
 TEXT ENGINE:
 	--ADDED: Text Engine. STATUS: Complete, extendable	
 		--Needed
-		  Ability to freely use colored text	
+		  Ability to freely use colored text(shader?)	
 		  Ability to use different fonts at one time(shaky font, small font)	
 ------------------------------------------------------------------------------
 USER MENUS:
 	--ADDED: Pause Menu STATUS: Incomplete
 		--Needed
-		Settings Page - audio and visual settings
+		Settings Page - audio and visual settings, test resolution on more than just my desktop/laptop
 ------------------------------------------------------------------------------
 HUD:
 	--ADDED: HP Bar, Stamina Bar, Key tracker, money tracker. STATUS: COMPLETE
@@ -62,31 +80,9 @@ UPGRADES(Sun and Moon):
 	--ADDED: Shrine System STATUS: COMPLETE
 ------------------------------------------------------------------------------
 Status Effects:
-	--ADDED Status Effects STATUS: COMPLETE
-------------------------------------------------------------------------------
-Momentum System:
-	--STATUS: INCOMPLETE
-		-Needed
-			dash + jump = longer jump
-			dash + jump off wall = longer wall jump
-			dash + jump off and back on = faster climb
-			dash + quickly press back = wavedash/backdash
-			hookshot needs a max speed
-			gravity needs a max speed 
-			sword while dashing? or speed up dash. dash speed could be like a roll
-------------------------------------------------------------------------------
-Physics System:
-	Ice - can slide through thin walls/into walls
-	Water
-	lava (platforms bubbling up), light boots let you walk slowly
-	slude/slowing materials
-	No climb walls
-	No hookshot walls
-	
+	--ADDED: Status(Frozen,Fire,Poison,Confused,Disarmed,Etc.) STATUS: COMPLETE
+------------------------------------------------------------------------------			
 BUGS:
-
-------------------------------------------------------------------------------
-
 	need to check gamepad before updating in counter
 	counter shouldnt activate on initial click
 	**check on multiple resolution computers**
@@ -103,7 +99,7 @@ BUGS:
 		//no hookshot walls - different as no dash walls. need both.
 		//room transitions /shooting out of room
 		//player not moving in the center - causes hookshot from wall to right to fail, causes shadow disparity
-		player horizontal speed should be capped for movement, and then have a slightly higher cap for things like 			rope/big dash/wall dash. preserved between rooms
+		player horizontal speed should be capped for movement, and then have a slightly higher cap for things like 			rope/big dash/wall 			dash. preserved between rooms
 		hookshot drops when you release the button
 		clicking down doesnt give proper momentum
 		if platform moves out of range of x and y, the hookshot wont hit the bottom of moving platform correctly
@@ -114,16 +110,7 @@ BUGS:
 		//Upgrade counter on menu says 9/10 when at 10/10
 		theres a little fall after warping. might be fixed by moving sprite
 		if youre swinging sword and heading towards a platform, you float at 2x speed
-		room transitions have draw issues, old screen flashes on screen
-		opening menu when money is coming at you causes break
+		room transitions have draw issues, old screen flashes on screen for a few frames
+		opening menu when money is coming at you causes segfault
 		minimap can start too close to border - if x/y is past the movement ones
 		dashing up slopes doesnt work
-		
-	Additions being worked on:
-		//Dash jumping - might give too high of a jump
-		//wall dash jumping
-		wall slide momentum - up
-		integrate hookshot momentum
-		
-		
-
