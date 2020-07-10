@@ -1,8 +1,45 @@
 ---------------------------------NEEDED FOR ENGINE------------------------------------------------------------------------------
-SAVE SYSTEM:
-	--ADDED: JSON File System
-		--Needed
-			-encrypting save files if the output is just text
+Physics System:
+	--STATUS: INCOMPLETE
+	--ADDED: Ice, Water, Hookshot, Movement all share a common momentum. Dash jumping added.
+		Multiple types of terrain(slowing liquids, non climbable/hookshotable walls)
+		-Needed
+			dash + quickly press back = wavedash/backdash
+			hookshot needs a max speed 
+			hookshot doesnt draw misfire
+			hookshot down gives too much momentum.
+			sword while dashing? or speed up dash. dash speed could be like a roll
+			lava (platforms bubbling up), light boots let you walk slowly	
+			wall slide momentum - up if you have enough(expecially on ice)
+			
+		Water Stuff:
+			need wavy top of water, right now its just flat
+			need collision with water surface to cause ripples
+			jumping into water from above lets you wade on surface
+				pressing action lets you dive, if you have flippers you swim, otherwise you sink
+				swimming is fast, like majoras mask.
+			Water jets
+				passable with dash/momentum vs non passable
+					non passable should do one of the following: turn you around, do dmg, act as a no climb wall/give a little velocity
+				can plug/turn off with rocks/switches/etc.
+------------------------------------------------------------------------------
+UPGRADES(Sun and Moon):
+	--ADDED: Shrine System STATUS: INCOMPLETE
+		-Sun Armor
+			-Sword: Greatsword. Low combo potential. all swings have knockback. causes confusion/stun or maybe a burn effect
+			-Armor: Slowly heals you outside of combat(needs to be very slow), higher blink/hitstun time
+			-Movement: dash leaves behind a flashbang, will stun unless the enemy is fast enough to turn around
+			-Counter: Armored shell, will confuse/stun enemies on successful parry. you dont swing sword
+		-Moon Armor
+			-Sword: Dual tantos/Scimitars. One forward one back. High combo potential/neutral A is repeatable
+			-Armor: out of combat semi invis to sneak around enemies. lower blink time means you get comboed easier.
+			-Movement: zed shadow marker. 
+			-Counter: possible wavedash style jump back and swing?
+		-Dual Armor
+			-Sword:
+			-Armor:
+			-Movement:
+			-Counter: Parry/Riposte
 ------------------------------------------------------------------------------				
 COMBAT:
 	--ADDED: Sword Mechanics. STATUS: INCOMPLETE
@@ -10,12 +47,23 @@ COMBAT:
 			-Smooth out combat
 			-Enemies attacking back
 			-Fighting patterns for each armor cleaned up
+			-Base Character
+				-Sword: Rapier/Saber. Combos have hitstun at the end, slices can inflict bleed.
+				-Armor: N/A
+				-Movement: Dash Upgrade
+				-Counter: Parry/Riposte
+
 ------------------------------------------------------------------------------
 BOSS FIGHTS:
 		--Needed
 			Boss attack patterns
 			Openings to hit them for large dmg?
 			bottom of screen health bar
+------------------------------------------------------------------------------
+SAVE SYSTEM:
+	--ADDED: JSON File System
+		--Needed
+			-encrypting save files, not allowing players to open JSON
 ------------------------------------------------------------------------------
 ENEMIES:
 	--ADDED: obj_enemyParent. STATUS: INCOMPLETE
@@ -25,13 +73,13 @@ ENEMIES:
 TEXT ENGINE:
 	--ADDED: Text Engine. STATUS: Complete, extendable	
 		--Needed
-		  Ability to freely use colored text	
+		  Ability to freely use colored text(shader?)	
 		  Ability to use different fonts at one time(shaky font, small font)	
 ------------------------------------------------------------------------------
 USER MENUS:
 	--ADDED: Pause Menu STATUS: Incomplete
 		--Needed
-		Settings Page - audio and visual settings
+		Settings Page - audio and visual settings, test resolution on more than just my desktop/laptop
 ------------------------------------------------------------------------------
 HUD:
 	--ADDED: HP Bar, Stamina Bar, Key tracker, money tracker. STATUS: COMPLETE
@@ -58,72 +106,7 @@ Room Exploration
 Room Darkness
 	--ADDED: con_lightManager STATUS: COMPLETE
 ------------------------------------------------------------------------------
-UPGRADES(Sun and Moon):
-	--ADDED: Shrine System STATUS: COMPLETE
-------------------------------------------------------------------------------
 Status Effects:
-	--ADDED Status Effects STATUS: COMPLETE
-------------------------------------------------------------------------------
-Momentum System:
-	--STATUS: INCOMPLETE
-		-Needed
-			dash + jump = longer jump
-			dash + jump off wall = longer wall jump
-			dash + jump off and back on = faster climb
-			dash + quickly press back = wavedash/backdash
-			hookshot needs a max speed
-			gravity needs a max speed 
-			sword while dashing? or speed up dash. dash speed could be like a roll
-------------------------------------------------------------------------------
-Physics System:
-	Ice - can slide through thin walls/into walls
-	Water
-	lava (platforms bubbling up), light boots let you walk slowly
-	slude/slowing materials
-	No climb walls
-	No hookshot walls
-	
-BUGS:
-
-------------------------------------------------------------------------------
-
-	need to check gamepad before updating in counter
-	counter shouldnt activate on initial click
-	**check on multiple resolution computers**
-	minimap doesnt always start in same spot
-	map screen doesnt move correctly, bottom right is cut off - might be a resolution issue?
-	cave might be too dark - need light from enemies, lava, gems, etc. darkest setting should be set according to brightness 	 of screen?
-	-------	
-	image angle not changing on slopes - cant break collision
-
-	HOOKSHOT FIXES:
-		//cant tell if hookshot holds momentum or not
-		//hookshot can be quickly shot off twice
-		//can spam click hookshot if it isnt going to make it
-		//no hookshot walls - different as no dash walls. need both.
-		//room transitions /shooting out of room
-		//player not moving in the center - causes hookshot from wall to right to fail, causes shadow disparity
-		player horizontal speed should be capped for movement, and then have a slightly higher cap for things like 			rope/big dash/wall dash. preserved between rooms
-		hookshot drops when you release the button
-		clicking down doesnt give proper momentum
-		if platform moves out of range of x and y, the hookshot wont hit the bottom of moving platform correctly
-		hookshot is drawn super extended even on hit(its onlyif its below you though)
-		hookshot doesnt attach if it hits a platform pre where its supposed to be
-	General -
-		//swinging sword while on hookshot
-		//Upgrade counter on menu says 9/10 when at 10/10
-		theres a little fall after warping. might be fixed by moving sprite
-		if youre swinging sword and heading towards a platform, you float at 2x speed
-		room transitions have draw issues, old screen flashes on screen
-		opening menu when money is coming at you causes break
-		minimap can start too close to border - if x/y is past the movement ones
-		dashing up slopes doesnt work
-		
-	Additions being worked on:
-		//Dash jumping - might give too high of a jump
-		//wall dash jumping
-		wall slide momentum - up
-		integrate hookshot momentum
-		
-		
+	--ADDED: Status(Frozen,Fire,Poison,Confused,Disarmed,Etc.) STATUS: COMPLETE
+------------------------------------------------------------------------------			
 
