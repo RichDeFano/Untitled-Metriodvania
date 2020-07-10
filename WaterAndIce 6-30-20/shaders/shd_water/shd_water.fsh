@@ -17,11 +17,16 @@ uniform vec3		brt_sat_con;		// could be turned into a constant
 
 uniform sampler2D	distort_tex;
 
-uniform float		blend_mode;			// for testing only
+//uniform float		blend_mode;			// for testing only
 uniform float		show_result;		// for debugging only
+
+///Wave on top of water
+
 
 
 void main() {
+
+	
     // DISTORT REFLECTION:
 	// create s the distorted water surface effect
 	//----------------------------------------------------------------------------
@@ -40,11 +45,17 @@ void main() {
 	//----------------------------------------------------------------------------
 	vec3 light_or_dark;
 	vec3 out_col;
+	
+		light_or_dark = floor(0.5 + v_vColour.rgb);
+		out_col =	light_or_dark			* (1.0 - (1.0 - base_col) * (1.0 - (v_vColour.rgb - 0.5))) + 
+					(1.0 - light_or_dark)	* (base_col * (v_vColour.rgb + 0.5));
+	/*
 	if (blend_mode == 0.0){
 		light_or_dark = floor(0.5 + base_col);
 		out_col =	light_or_dark			* (1.0 - (1.0 - 2.0 * (base_col - 0.5)) * (1.0 - v_vColour.rgb)) + 
 					(1.0 - light_or_dark)	* 2.0 * base_col * v_vColour.rgb;
 	}
+
 	// soft light:
 	if (blend_mode == 1.0) {
 		light_or_dark = floor(0.5 + v_vColour.rgb);
@@ -63,7 +74,7 @@ void main() {
 		out_col =	light_or_dark			* min(base_col / (1.0 - 2.0 * (v_vColour.rgb - 0.5)), 1.0) + 
 					(1.0 - light_or_dark)	* max(1.0 - (1.0 - base_col) / (2.0 * v_vColour.rgb), 0.0);
 	}
-	
+	*/
 
 	// ADJUST BLENDED COLOUR:
 	//----------------------------------------------------------------------------
@@ -86,11 +97,16 @@ void main() {
 	// DEBUG:
 	// After testing, remove this and the show_result uniform
 	//----------------------------------------------------------------------------
-	out_col = mix(out_col, distort_sample, show_result);
+	//out_col = mix(out_col, distort_sample, show_result);
+	vec4 final_col = vec4(out_col,0.90);
+	
+	/*
+	
+	*/
 	
 	
 	// OUTPUT:
 	//----------------------------------------------------------------------------
-	gl_FragColor		= vec4(out_col, 0.90);
+	gl_FragColor		= final_col * texture2D(gm_BaseTexture,v_vTexcoord);//
 }
 

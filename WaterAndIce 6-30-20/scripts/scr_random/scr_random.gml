@@ -180,3 +180,13 @@ else
 {
 	playerInWater = false;
 }
+
+if (place_meeting(x,y,obj_waterStream))
+{
+	playerWaterStream = true;
+	//could pass direction/speed here
+}
+else
+{
+	playerWaterStream = false;
+}

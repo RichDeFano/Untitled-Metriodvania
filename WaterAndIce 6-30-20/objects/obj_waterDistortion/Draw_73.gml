@@ -36,10 +36,10 @@ if (y < (view_y + app_h)) {
 	// get dimension variables:
 	//-------------------------------------------------------------------------
 	
-	var water_y_scale	= 0.75;	//0.10 -> 0.50?
+	var water_y_scale	= 0.25;	//0.10 -> 0.50?
 	var water_level		= y - view_y;
-	var srf_water_w		= surface_get_width(application_surface);
-	var srf_water_h		= max(1, app_h - water_level); // mustn't be <= 0
+	var srf_water_w		= sprite_width;	 //surface_get_width(application_surface); 
+	var srf_water_h		= sprite_height//max(1, app_h - water_level) ; // mustn't be <= 0
 	var reflection_h	= min(srf_water_h / water_y_scale, water_level) - 2; // -2 so we always got 2 pixels rows of water colour at the bottom
 	
 	var srf_scale = 0.66;
@@ -71,13 +71,14 @@ if (y < (view_y + app_h)) {
 	//-------------------------------------------------------------------------
 	surface_set_target(srf_water);
 		draw_clear_alpha(water_col, 1);
-		draw_surface_part_ext(	application_surface, 0, water_level,
+		
+		draw_surface_part_ext(	application_surface, x, water_level,
 								srf_water_w, -reflection_h, 0, 0,
 								srf_scale, -water_y_scale * srf_scale,
 								c_white, 1);
 		
 		//gpu_set_colorwriteenable(true, true, true, false); // not that important but use this if you notice the water surface looses alpha
-		draw_sprite_stretched(spr_waterLine, 0, 0, 0, srf_water_w, 0.80);
+		//draw_sprite_stretched(spr_waterLine, 0, 0, 0, srf_water_w, 0.70);
 		//gpu_set_colorwriteenable(true, true, true, true);
 		
 		/*
@@ -89,7 +90,7 @@ if (y < (view_y + app_h)) {
 								srf_scale, -srf_scale, 0, c_white, 1);
 								*/
 	surface_reset_target();
-	
+
 	
 	// draw surface back to aplication:
 	//-------------------------------------------------------------------------
@@ -100,11 +101,20 @@ if (y < (view_y + app_h)) {
 		shader_set_uniform_f(u_water_col,			color_get_red(water_col)/255, color_get_green(water_col)/255, color_get_blue(water_col)/255); // could be turned into a constant
 		shader_set_uniform_f(u_col_mix,				col_mix_0, col_mix_1);				// could be turned into a constant
 		shader_set_uniform_f(u_brt_sat_con,			brightness, saturation, contrast);	// could be turned into a constant
-		shader_set_uniform_f(u_blend_mode,			blend_mode);						// for testing only
+		//shader_set_uniform_f(u_blend_mode,			blend_mode);						// for testing only
 		shader_set_uniform_f(u_show_result,			show_result);						// for debugging only
+		
+		
+		/* pixelH;
+uniform float pixelW;
+uniform float springs[2000];
+uniform float time;
+uniform float fizzle;
+uniform float springCount;
+*/
 		texture_set_stage(u_distort_tex,			distort_tex);
 		
-		draw_surface_ext(srf_water, view_x, y, 1 / srf_scale, 1 / srf_scale, 0, blend_col, 1);
+		draw_surface_ext(srf_water, x, y, 1 / srf_scale, 1 / srf_scale, 0, blend_col, 1);
 	shader_reset();
 	
 	

@@ -1,38 +1,38 @@
 {
-    "id": "412bc2e8-9200-4bac-ab22-17a71672f6c9",
+    "id": "be5c3b62-029b-4905-9827-f6fcad6862f0",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_water",
+    "name": "obj_waterJet",
     "eventList": [
         {
-            "id": "375ca84d-4414-4840-858d-984fe9453bb1",
+            "id": "a399a089-a734-43c9-b739-1a8230a8cb40",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
-            "m_owner": "412bc2e8-9200-4bac-ab22-17a71672f6c9"
+            "m_owner": "be5c3b62-029b-4905-9827-f6fcad6862f0"
         },
         {
-            "id": "bc39776b-200d-43bd-a2d3-677879c0472e",
+            "id": "146b861b-d665-4b79-ba45-2b2c64fe1cf2",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
-            "eventtype": 3,
-            "m_owner": "412bc2e8-9200-4bac-ab22-17a71672f6c9"
+            "eventtype": 2,
+            "m_owner": "be5c3b62-029b-4905-9827-f6fcad6862f0"
         },
         {
-            "id": "9e4ffaee-5631-4236-9fc1-61e18ec6a7bc",
+            "id": "d9bf31ab-f7f3-4bac-a759-9dcf86f88b8d",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 8,
-            "m_owner": "412bc2e8-9200-4bac-ab22-17a71672f6c9"
+            "enumb": 1,
+            "eventtype": 2,
+            "m_owner": "be5c3b62-029b-4905-9827-f6fcad6862f0"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -53,6 +53,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "f7c7bff2-205c-4ef7-a2b5-f06b738262d8",
+    "spriteId": "89054a7e-a6c5-422f-8a1d-3837a2017c04",
     "visible": true
 }

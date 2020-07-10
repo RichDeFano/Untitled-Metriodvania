@@ -35,6 +35,7 @@ extrahsp = 0;
 playerOnIce = false;
 frict = 0;
 playerInWater = false;
+playerWaterStream = false;
 /////Sword stuff
 move_lock2 = false;
 combocount = 0;

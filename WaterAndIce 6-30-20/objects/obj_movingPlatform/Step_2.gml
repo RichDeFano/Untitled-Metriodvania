@@ -18,7 +18,8 @@ else
 	isStuck = false;
 	if (instance_exists(obj_deadly))
 	{
-		instance_destroy(obj_deadly);
+		//var nearest = instance_
+		//instance_destroy(obj_deadly);
 		solid = true;
 	}
 }

@@ -1,11 +1,5 @@
 /// @description Insert description here
 // You can write your code in this editor
-//y = ystart + 2.33 * dsin(current_time / 15); // optional
-
-
-	
-
-
 ///Hookes Law
 for (var i = 0; i <=springCount; i++){
 	var _a = -k * springs[i] - d * springsVelocity[i];

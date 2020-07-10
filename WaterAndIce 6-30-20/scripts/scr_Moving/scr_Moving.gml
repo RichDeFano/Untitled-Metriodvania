@@ -1,48 +1,48 @@
 var slowValue;
-if (global.statusSlowed == true) || (playerInWater == true)
-{slowValue = 2;}
-else
-{slowValue = 1;}
-//glowYellow = false;
+if (global.statusSlowed == true)
+	{slowValue = 2;}
+	else if (playerInWater == true)
+	{slowValue = 1.5;}
+	else
+	{slowValue = 1;}
 
 if ((global.inText == false) && (global.statusFrozen == false) && (global.atShrine == false))
 {
+
+//Hookshot
 	if (global.hookshotUnlocked == true)
 	{
 		scr_hookshotMain();
 	}
 
-
-	if ((attacking == true))
-	{
-		
-		
-    
+///Sword Stuff
+if ((attacking == true))
+{
 	if ((!(place_meeting(x+1,y,obj_wall)) && !(place_meeting(x-1,y,obj_wall))) || (playerOnIce == true))
-	    {
-		    if (vsp < 10)
-		    {vsp += grav;}
-	    }
-
-	if (((place_meeting(x+1,y,obj_wall)) || (place_meeting(x-1,y,obj_wall))) && (playerOnIce == false))
-	    {
-		    if (vsp < 3.0)
-		    {vsp += grav;}
-	    }
-
-
-	if ( (sprite_index == spr_player_sword_jumpD) || (sprite_index == spr_player_sword_jumpU) || (sprite_index == spr_player_sword_jump) )
-	{
-		if (place_meeting(x,y+vsp,obj_wall))
 		{
-		    while(!place_meeting(x,y+sign(vsp),obj_wall))
-		    {
-		        y += sign(vsp);
-		    }
-		    vsp = 0;
+		if (vsp < 10)
+		{vsp += grav;}
 		}
-		y += vsp;
-	}
+
+		if (((place_meeting(x+1,y,obj_wall)) || (place_meeting(x-1,y,obj_wall))) && (playerOnIce == false))
+		    {
+			    if (vsp < 3.0)
+			    {vsp += grav;}
+		    }
+
+
+		if ( (sprite_index == spr_player_sword_jumpD) || (sprite_index == spr_player_sword_jumpU) || (sprite_index == spr_player_sword_jump) )
+		{
+			if (place_meeting(x,y+vsp,obj_wall))
+			{
+			    while(!place_meeting(x,y+sign(vsp),obj_wall))
+			    {
+			        y += sign(vsp);
+			    }
+			    vsp = 0;
+			}
+			y += vsp;
+		}
 
 	if ((!place_meeting(x+5,y+1,obj_wall)) && (!place_meeting(x-5,y+1,obj_wall)))
 	{
@@ -59,10 +59,10 @@ if ((global.inText == false) && (global.statusFrozen == false) && (global.atShri
 	}
 
 }
-
-
-
+//Dashing and Jumping
 scr_dashJump();
+
+/////Terrain Physics
 if ((attacking == false) && (dashing == false) && (dmgfrozen == false))
 	{
 //////////////////////////////////////////////////////
@@ -74,6 +74,8 @@ if ((attacking == false) && (dashing == false) && (dmgfrozen == false))
 	
 	if (extrahsp > 0)
 		{extrahsp -= 0.05;}
+	if (extravsp > 0)
+		{extravsp -= 0.05;}
 /////////////////////////////////////
 //Ice and startup physics
 if (playerOnIce == true)
@@ -107,28 +109,26 @@ else
 	frict = 0;
 	hsp = (move * (movespeed+extrahsp));
 }
-////////////////////////W
+////////////////////////Water
 if (playerInWater == true)
 {
 	hsp = (move * (movespeed+extrahsp))/1.1;
 	
+	//Falling twice as slowly because of the reduced gravity
 	if (!(place_meeting(x+1,y,obj_wall)) && !(place_meeting(x-1,y,obj_wall)))
 	{
-	if (vsp < 10) vsp += grav/2;
+	if (vsp < 10) {vsp += grav/2;}
 	}
 	
+	//Sliding down walls twice as slowly because of the reduced gravity
 	if ((global.wallJumpUnlocked == true) && (playerCanWJ == true) && (playerOnIce == false))
 	{
-				
-			if ((place_meeting(x+1,y,obj_wall)) || (place_meeting(x-1,y,obj_wall)))
-				{	
-				if (vsp < 1.5) {vsp += grav/2;}
-				if (vsp > 1.5) {vsp = 1.5;}
-				}
-				
-	
+		if ((place_meeting(x+1,y,obj_wall)) || (place_meeting(x-1,y,obj_wall)))
+			{	
+			if (vsp < 1.5) {vsp += grav/2;}
+			if (vsp > 1.5) {vsp = 1.5;}
+			}
 	}
-
 	else
 	{
 		if ((place_meeting(x+1,y,obj_wall)) || (place_meeting(x-1,y,obj_wall)))
@@ -142,24 +142,21 @@ if (playerInWater == true)
 else
 {
 	
-
+	//Falling Normally, no walls around
 	if (!(place_meeting(x+1,y,obj_wall)) && !(place_meeting(x-1,y,obj_wall)))
 	{
 	if (vsp < 10) vsp += grav;
 	}
 
+	//Wall Sliding
 	if ((global.wallJumpUnlocked == true) && (playerCanWJ == true) && (playerOnIce == false))
 	{
-				
-			if ((place_meeting(x+1,y,obj_wall)) || (place_meeting(x-1,y,obj_wall)))
-				{	
-				if (vsp < 3.0) {vsp += grav;}
-				if (vsp > 3.0) {vsp = 3.0;}
-				}
-				
-	
+		if ((place_meeting(x+1,y,obj_wall)) || (place_meeting(x-1,y,obj_wall)))
+			{	
+			if (vsp < 3.0) {vsp += grav;}
+			if (vsp > 3.0) {vsp = 3.0;}
+			}
 	}
-
 	else
 	{
 		if ((place_meeting(x+1,y,obj_wall)) || (place_meeting(x-1,y,obj_wall)))
@@ -172,18 +169,74 @@ else
 
 }
 
+/////Water Jets
+if (playerWaterStream == true)
+{
+	//The water has some variables we need to grab
+	var dirX, dirY, mag, ang;
+	//Direction
+	//Magnitude
+		//if magnitude is above a certain threshold, it should kick the player out but also carry them with
+		//if the magnitude is below it will add to the players hsp and vsp
+		//should ride to top and kind of bounce on the water
+		//if jet is out of water gravity will slowly pull you out of a horizontal one, but in water it will cancel the gravity
+	if (instance_exists(obj_waterStream))
+		{
+		var inst = instance_nearest(x,y,obj_waterStream)
+			dirX = inst.directX;
+			dirY = inst.directY;
+			ang = inst.angle;
+			mag = sqrt(power(dirX,2) + power(dirY,2));
+			if (mag > 10) //Water is impassable
+			{
+				//move player out of the box and closer to where it came from
+				//maybe bounce player out, reset move on key release
+				extrahsp = dirX;
+				extravsp = dirY;
+			}
+			else if (mag < 10)
+			{
+				//add the waters x magnitude to xsp and y magnitude to vsp
+				extrahsp = dirX;
+				extravsp = dirY;
+				
+			}
+			
+
+	/*
+	jumps = 0;
+	if (instance_exists(obj_waterStream))
+		{
+		var inst = instance_nearest(x,y,obj_waterStream)
+			if (inst.passable == false)
+			{
+				hsp = -(move * (movespeed+extrahsp));
+			}
+			else
+			{
+				if (vsp > -6) {vsp -= grav*2;}
+				if (vsp < -6) {vsp = -6;}
+			}
+		}
+		*/
+}
+else
+{
+
+}
+
+	
+/////Collision Code
 	var hsp_final = (hsp + hsp_carry)/(slowValue);
 	hsp_carry = 0;
 		yplus = 0;
 	//Horizontal Collision
 	if (place_meeting(x+hsp_final,y,obj_wall))
 	{
-
-		//yplus = 0;
+		//Walking up a platform as long as the slope increase is smooth enough
 		while (place_meeting(x+hsp_final,y-yplus,obj_wall) && (yplus <= 5))
 			{
 				yplus+=1;
-				global.testVar = yplus;
 			}
 		
 		if (place_meeting(x+hsp_final,y-yplus,obj_wall))
@@ -192,23 +245,19 @@ else
 		    {
 		    x += sign(hsp_final);
 		    }
-					hsp_final = 0;
+			hsp_final = 0;
 			hsp = 0;
 		}
 		else
 		{y-= yplus}
-	
-	//hsp_final = 0;
-	//hsp = 0;
 
 	}
 	x += hsp_final;
 
 
-
+	
 	if ((!place_meeting(x,y,obj_wall)) && (vsp >= 0) && (place_meeting(x,y+2+abs(hsp_final),obj_wall)))
 	{
-
 		while !(place_meeting(x,y+1,obj_wall))
 		{y += 1;}
 	}
@@ -217,7 +266,6 @@ else
 	//Vertical Collision
 	if (place_meeting(x,y+vsp,obj_wall))
 	{
-
 	   while (!place_meeting(x,y+sign(vsp),obj_wall))
 	    {
 	        y += sign(vsp);
@@ -230,7 +278,11 @@ else
 ///////////////////////////////////////////////////		
 //////////////Animations
 ////////////////////////////////////////////////////////
-		if (move!=0) image_xscale = move;
+
+		//Left vs right
+		if (move!=0) {
+			image_xscale = round(move);
+			}
 
 
 		if (place_meeting(x,y+1,obj_wall))				//If you are grounded
@@ -281,7 +333,7 @@ else
 				//candash = true;
 			}
         
-	        }
+	       }
 	     else
 	     {
 		sprite_index = spr_player_fall;
