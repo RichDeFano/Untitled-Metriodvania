@@ -1,0 +1,32 @@
+BUGS:
+	need to check gamepad before updating in counter
+	counter shouldnt activate on initial click
+	**check on multiple resolution computers**
+	minimap doesnt always start in same spot
+	map screen doesnt move correctly, bottom right is cut off - might be a resolution issue?
+	cave might be too dark - need light from enemies, lava, gems, etc. darkest setting should be set according to brightness 	 of screen?
+	-------	
+	image angle not changing on slopes - cant break collision
+
+	HOOKSHOT FIXES:
+		//cant tell if hookshot holds momentum or not
+		//hookshot can be quickly shot off twice
+		//can spam click hookshot if it isnt going to make it
+		//no hookshot walls - different as no dash walls. need both.
+		//room transitions /shooting out of room
+		//player not moving in the center - causes hookshot from wall to right to fail, causes shadow disparity
+		player horizontal speed should be capped for movement, and then have a slightly higher cap for things like 			rope/big dash/wall 			dash. preserved between rooms
+		hookshot drops when you release the button
+		clicking down doesnt give proper momentum
+		if platform moves out of range of x and y, the hookshot wont hit the bottom of moving platform correctly
+		hookshot is drawn super extended even on hit(its onlyif its below you though)
+		hookshot doesnt attach if it hits a platform pre where its supposed to be
+	General -
+		//swinging sword while on hookshot
+		//Upgrade counter on menu says 9/10 when at 10/10
+		theres a little fall after warping. might be fixed by moving sprite
+		if youre swinging sword and heading towards a platform, you float at 2x speed
+		room transitions have draw issues, old screen flashes on screen for a few frames
+		opening menu when money is coming at you causes segfault
+		minimap can start too close to border - if x/y is past the movement ones
+		dashing up slopes doesnt work
