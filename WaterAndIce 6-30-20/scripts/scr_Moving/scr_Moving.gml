@@ -72,12 +72,76 @@ if ((attacking == false) && (dashing == false) && (dmgfrozen == false))
 	    move = key_left + key_right
 	}
 	
-	if (extrahsp > 0)
-		{extrahsp -= 0.05;}
-	if (extravsp > 0)
-		{extravsp -= 0.05;}
+	if (extrahsp > 0){extrahsp -= 0.05;}
+	if (extravsp > 0){extravsp -= grav;}
+		
+	if (extrahsp < 0){extrahsp += 0.05;}
+	if (extravsp < 0){extravsp += grav;}
+		
+	if ((extrahsp < 0.10) && (extrahsp > -0.10)){extrahsp = 0;}
+	if ((extravsp < 0.10) && (extravsp > -0.10)){extravsp = 0;}
+		
 /////////////////////////////////////
 //Ice and startup physics
+/////Water Jets
+if (playerWaterStream == true)
+{
+	var dirX, dirY, mag, ang;
+	
+	if (instance_exists(obj_waterJet))
+	{
+		var endinghsp = 0; var endingvsp = 0;
+		for (var i = 0; i < instance_number(obj_waterJet); i += 1)
+		{
+			var closestJet = instance_find(obj_waterJet,i);
+			//var closestJet = instance_nearest(x,y,obj_waterJet);
+			if (closestJet.firing == true)
+			{
+					//draw_rectangle(x,y,x+newX,y-newY,true);
+					for(var h = 0; h < closestJet.maxHeight; h++){
+						for(var w=0; w<=closestJet.width;w++){
+							var newY = (h*16)*dcos(closestJet.image_angle) - (w*16)*dsin(closestJet.image_angle);
+							var newX = (h*16)*dsin(closestJet.image_angle) + (w*16)*dcos(closestJet.image_angle);
+							if ((abs(obj_Player.x-(closestJet.x-newX)) <= 16) && (abs(obj_Player.y-(closestJet.y-newY)) <= 16))
+							{
+							//draw_point_color(x-newX,y-newY,c_green);
+							//closestJet.drawMag = true;
+					
+							mag = ds_grid_get(closestJet.magnitudeGrid,w,h);
+							ang = ds_grid_get(closestJet.angleGrid,w,h);
+							///calculate x and y components
+				
+								if ((mag > 0) && (ang >= 0))//&& (image_xscale == 1))
+								{
+									var dirX, dirY;
+									dirX = mag*dcos(ang);
+									dirY = -mag*dsin(ang);
+					
+									endinghsp += dirX;
+								
+									if (key_up)
+									{endingvsp += dirY;}
+									else
+									{endingvsp = dirY/2;}
+								}
+							}
+						}
+					}
+				}
+		}
+		if (endinghsp < -6){endinghsp = -6;}
+		if (endinghsp > 6){endinghsp = 6;}
+		extrahsp = endinghsp;
+		extravsp = endingvsp;
+	}
+}
+else
+{
+	//removing hsp/vsp if you arent in a jet? would make it feel different than ice
+	//needs custom variables
+	//might not play well with hookshot
+}
+
 if (playerOnIce == true)
 {
 	if (move != 0){
@@ -107,12 +171,12 @@ if (playerOnIce == true)
 else
 {
 	frict = 0;
-	hsp = (move * (movespeed+extrahsp));
+	hsp = ((move * (movespeed)) + extrahsp);
 }
 ////////////////////////Water
 if (playerInWater == true)
 {
-	hsp = (move * (movespeed+extrahsp))/1.1;
+	hsp = ((move * (movespeed)) + extrahsp)/1.1;
 	
 	//Falling twice as slowly because of the reduced gravity
 	if (!(place_meeting(x+1,y,obj_wall)) && !(place_meeting(x-1,y,obj_wall)))
@@ -169,65 +233,13 @@ else
 
 }
 
-/////Water Jets
-if (playerWaterStream == true)
-{
-	//The water has some variables we need to grab
-	var dirX, dirY, mag, ang;
-	//Direction
-	//Magnitude
-		//if magnitude is above a certain threshold, it should kick the player out but also carry them with
-		//if the magnitude is below it will add to the players hsp and vsp
-		//should ride to top and kind of bounce on the water
-		//if jet is out of water gravity will slowly pull you out of a horizontal one, but in water it will cancel the gravity
-	if (instance_exists(obj_waterStream))
-		{
-		var inst = instance_nearest(x,y,obj_waterStream)
-			dirX = inst.directX;
-			dirY = inst.directY;
-			ang = inst.angle;
-			mag = sqrt(power(dirX,2) + power(dirY,2));
-			if (mag > 10) //Water is impassable
-			{
-				//move player out of the box and closer to where it came from
-				//maybe bounce player out, reset move on key release
-				extrahsp = dirX;
-				extravsp = dirY;
-			}
-			else if (mag < 10)
-			{
-				//add the waters x magnitude to xsp and y magnitude to vsp
-				extrahsp = dirX;
-				extravsp = dirY;
-				
-			}
-			
 
-	/*
-	jumps = 0;
-	if (instance_exists(obj_waterStream))
-		{
-		var inst = instance_nearest(x,y,obj_waterStream)
-			if (inst.passable == false)
-			{
-				hsp = -(move * (movespeed+extrahsp));
-			}
-			else
-			{
-				if (vsp > -6) {vsp -= grav*2;}
-				if (vsp < -6) {vsp = -6;}
-			}
-		}
-		*/
-}
-else
-{
-
-}
 
 	
 /////Collision Code
 	var hsp_final = (hsp + hsp_carry)/(slowValue);
+	vsp = vsp + extravsp;
+	if (vsp < -5){vsp = -5;}
 	hsp_carry = 0;
 		yplus = 0;
 	//Horizontal Collision

@@ -2743,14 +2743,6 @@
             }
         },
         {
-            "Key": "aa32c043-c161-4c3a-9165-28dcf34fab9a",
-            "Value": {
-                "id": "4339a52c-1f64-431b-a698-58a4f1dfc6d8",
-                "resourcePath": "objects\\obj_waterStream\\obj_waterStream.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "aa37472c-b62b-48bd-9587-25b284e7291d",
             "Value": {
                 "id": "6246479b-6197-41e9-a96b-ba1e6f44a082",
