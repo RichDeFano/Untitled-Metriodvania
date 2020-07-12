@@ -5,9 +5,7 @@ Physics System:
 		Multiple types of terrain(slowing liquids, non climbable/hookshotable walls)
 		-Needed
 			dash + quickly press back = wavedash/backdash
-			hookshot needs a max speed 
-			hookshot doesnt draw misfire
-			hookshot down gives too much momentum.
+			hookshot fixes
 			sword while dashing? or speed up dash. dash speed could be like a roll
 			lava (platforms bubbling up), light boots let you walk slowly	
 			wall slide momentum - up if you have enough(expecially on ice)
@@ -19,7 +17,13 @@ Physics System:
 				pressing action lets you dive, if you have flippers you swim, otherwise you sink
 				swimming is fast, like majoras mask.
 			Water jets
-				passable with dash/momentum vs non passable
+				//passable with dash/momentum vs non passable - dependant on jet speed, if it cancels out movement/dash.\
+					dash still overrides the momentum
+				//Variable water angle
+				//Variable water strength
+				//Bobbing on top of water if coming from below
+				Being pulled by multiple jets
+				possible variable vector fields such as bends and curves? may need to hard code in the dsgrid 
 					non passable should do one of the following: turn you around, do dmg, act as a no climb wall/give a little velocity
 				can plug/turn off with rocks/switches/etc.
 ------------------------------------------------------------------------------

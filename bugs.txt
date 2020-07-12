@@ -21,6 +21,15 @@ BUGS:
 		if platform moves out of range of x and y, the hookshot wont hit the bottom of moving platform correctly
 		hookshot is drawn super extended even on hit(its onlyif its below you though)
 		hookshot doesnt attach if it hits a platform pre where its supposed to be
+		hookshot needs a max speed 
+			hookshot doesnt draw misfire
+			hookshot down gives too much momentum.
+
+	WATER FIXES:
+		water shader looks really bad on laptop
+		light filter looks bad on laptop
+		cant be affected by multiple jets
+		
 	General -
 		//swinging sword while on hookshot
 		//Upgrade counter on menu says 9/10 when at 10/10
