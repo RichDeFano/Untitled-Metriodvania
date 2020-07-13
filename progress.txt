@@ -11,6 +11,7 @@ Physics System:
 			sword while dashing? or speed up dash. dash speed could be like a roll
 			lava (platforms bubbling up), light boots let you walk slowly	
 			wall slide momentum - up if you have enough(expecially on ice)
+			grabbing ledges and climbing up/dropping down on ledge(only if you have wall cling)
 			
 		Water Stuff:
 			need wavy top of water, right now its just flat
@@ -40,6 +41,11 @@ UPGRADES(Sun and Moon):
 			-Armor:
 			-Movement:
 			-Counter: Parry/Riposte
+			
+			armor bonus is given by meditating - staying idle for a while.
+			no armor meditate stops status effects from harming you any further
+			enemies will do double dmg if they break your meditation
+			
 ------------------------------------------------------------------------------				
 COMBAT:
 	--ADDED: Sword Mechanics. STATUS: INCOMPLETE
