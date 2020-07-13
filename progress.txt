@@ -1,7 +1,7 @@
 ---------------------------------NEEDED FOR ENGINE------------------------------------------------------------------------------
 Physics System:
 	--STATUS: INCOMPLETE
-	--ADDED: Ice, Water, Hookshot, Movement all share a common momentum. Dash jumping added.
+	--ADDED: Ice, Water, Hookshot, Movement all share a common extra momentum. Dash jumping added.
 		Multiple types of terrain(slowing liquids, non climbable/hookshotable walls)
 		-Needed
 			dash + quickly press back = wavedash/backdash
@@ -11,18 +11,17 @@ Physics System:
 			sword while dashing? or speed up dash. dash speed could be like a roll
 			lava (platforms bubbling up), light boots let you walk slowly	
 			wall slide momentum - up if you have enough(expecially on ice)
-			grabbing ledges and climbing up/dropping down on ledge(only if you have wall cling)
+			//grabbing ledges and climbing up/dropping down on ledge(only if you have wall cling)? wall cling might make it feel clunky
 			
 		Water Stuff:
 			need wavy top of water, right now its just flat
 			need collision with water surface to cause ripples
-			jumping into water from above lets you wade on surface
-				pressing action lets you dive, if you have flippers you swim, otherwise you sink
-				swimming is fast, like majoras mask.
-			Water jets
-				passable with dash/momentum vs non passable
+			
+			Water jet additions
+				non passable with dashing
 					non passable should do one of the following: turn you around, do dmg, act as a no climb wall/give a little velocity
 				can plug/turn off with rocks/switches/etc.
+				sprites instead of dots
 ------------------------------------------------------------------------------
 UPGRADES(Sun and Moon):
 	--ADDED: Shrine System STATUS: INCOMPLETE
