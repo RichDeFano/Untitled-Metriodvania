@@ -57,6 +57,36 @@ COMBAT:
 				-Armor: N/A
 				-Movement: Dash Upgrade
 				-Counter: Parry/Riposte
+				
+				
+			holding down puts up a block(stamina gain /2)
+			pressing button causes the parry to go off
+			
+			Parrying beats heavy hits(counters their momentum)
+			heavy hits beat short hits(no hitstun to stop you)
+			short hits beats parrying(can only block one hit, but then left open as you swing/thrust back)
+			
+			blocks stop short hits
+			bocks on heavies will cause both players to clink on
+			
+			short hits have no hitstun, but multiple short hits will cause bleed
+			heavy hits have hitstun/momentum, but has recovery frames for player(still should be able to combo though)
+			
+			the same kind of hit will clink with enemy. depending on your armor, the recovery time will be short(moon) to long(sun)
+			
+			moon combat about getting a few strikes in and then repositioning/dodging/parrying big moves
+				moon combat in air is very flashy
+				should always feel faster than opponent
+				should usually be able to dodge abilities as long as you dont commit to one more attack
+				
+				weak if caught out
+				weak to heavies
+			
+			sun combat is about getting in one large hit.
+				can rush enemies that are overly aggro and tank a hit or two
+				can break shield with end of combo/some arials
+				
+				
 
 ------------------------------------------------------------------------------
 BOSS FIGHTS:
