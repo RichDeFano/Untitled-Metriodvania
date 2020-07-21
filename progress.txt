@@ -10,6 +10,11 @@ Physics System:
 			lava (platforms bubbling up), light boots let you walk slowly	
 			wall slide momentum - up if you have enough(expecially on ice)
 			
+			pushing blocks
+			picking up objects?
+			
+			swimming with flippers
+			
 		Water Stuff:
 			need wavy top of water, right now its just flat
 			need collision with water surface to cause ripples
@@ -22,7 +27,7 @@ Physics System:
 				//Variable water angle
 				//Variable water strength
 				//Bobbing on top of water if coming from below
-				Being pulled by multiple jets
+				//Being pulled by multiple jets
 				possible variable vector fields such as bends and curves? may need to hard code in the dsgrid 
 					non passable should do one of the following: turn you around, do dmg, act as a no climb wall/give a little velocity
 				can plug/turn off with rocks/switches/etc.
@@ -56,6 +61,12 @@ COMBAT:
 				-Armor: N/A
 				-Movement: Dash Upgrade
 				-Counter: Parry/Riposte
+			
+			-Sun Armor
+			
+			-Moon Armor
+			
+			-Dual Armor
 
 ------------------------------------------------------------------------------
 BOSS FIGHTS:
@@ -83,7 +94,11 @@ TEXT ENGINE:
 USER MENUS:
 	--ADDED: Pause Menu STATUS: Incomplete
 		--Needed
-		Settings Page - audio and visual settings, test resolution on more than just my desktop/laptop
+		Settings Page - 
+			Need Audio/Video Page.
+				-Controlling Brightness with a slider
+				-controlling scale/fullscreen vs windowed
+				-
 ------------------------------------------------------------------------------
 HUD:
 	--ADDED: HP Bar, Stamina Bar, Key tracker, money tracker. STATUS: COMPLETE
