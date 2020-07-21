@@ -98,7 +98,7 @@ USER MENUS:
 			Need Audio/Video Page.
 				-Controlling Brightness with a slider
 				-controlling scale/fullscreen vs windowed
-				-
+				-keeping track of enemies youve seen
 ------------------------------------------------------------------------------
 HUD:
 	--ADDED: HP Bar, Stamina Bar, Key tracker, money tracker. STATUS: COMPLETE
