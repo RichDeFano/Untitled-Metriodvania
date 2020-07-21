@@ -12,6 +12,10 @@ Physics System:
 			lava (platforms bubbling up), light boots let you walk slowly	
 			wall slide momentum - up if you have enough(expecially on ice)
 			//grabbing ledges and climbing up/dropping down on ledge(only if you have wall cling)? wall cling might make it feel clunky
+			hookshot on enemy should be different for each armor
+				moon(switch positions)
+				sun(charge opponent and stun them if they arent shielding)
+				normal(short stun
 			
 		Water Stuff:
 			need wavy top of water, right now its just flat
@@ -85,7 +89,73 @@ COMBAT:
 			sun combat is about getting in one large hit.
 				can rush enemies that are overly aggro and tank a hit or two
 				can break shield with end of combo/some arials
+------------------------------------------------------------------------------
+ENEMIES:
+	--ADDED: obj_enemyParent. STATUS: INCOMPLETE
+		-need to flesh out character moveset before enemies can be designed around it
+		
+		range+support, damage dealer+swordsman, tank+distraction?
+		swordsman will always try to engage you, expecially if you are running at a mage/range
+		mage/range will try to evade and support, while doing dmg if they arent being pursued
+		
+		Sun enemies
+			Mages:
+				could have a staff or glow on arms to visualise incoming attacks(color may help too)
+				long animations, ranged attacks. no good melee defense or shielding. small hits can be blocked with sword
+				depends on the elements they are near(water, fire from torches/lava, earth in caves, nature in forest/swamp)
+				should have a move to distance from player, an aggressive projectile, an airial, and a team help
+					Water: waterbend jets to push player out of range
+						       create ice needles and throw them at player one at a time(very quick linear motion)	
+						       tsunami to jump high in the air(could do more needles down/at player)
+						       can cause fog to reduce visibility(spell glow goes through fog, gets worse if you leave him unharmed)
+					Fire: simple fireball
+					      lava projectile that creates lava pillars on surface
+					      manipulate light sources?
+					      ring of fire spin in air(more defensive/ make player stand back)
+					      lights enemies swords on fire for burn on hit
+					Earth:
+						send rocks at target
+						hit the floor that causes the player to trip/get knocked
+						can walk on walls/ceiling, and quick pillar shoot in a direction
+						other enemies cannot be knocked away, feet are set in stone
+						dropping/moving boulders and stalagmites
+					      
+			Swordsman(dark knight/iron knuckle style:
+				sword + shield/longsword/greatsword
+					S&S: good at blocking, not great at killing you. simple swings/jumps. possibly a roll
+					longsword: a little slower, but has a parry.
+					greatsword: big combo finishers if buffed(one special for each element
+					
+			--------
+			Moon enemies:
+			
+				Assassin:
+					sword class with quick attacks, lots of rolling, and wall climbing abilities.
+					higher tiers should have partial stealth(shimmering/mirror effect)
+					highest tiers should charge their sword before lightning strikes, use it as a large slash/combo finisher?
+					parry is naruto log style hit
+				Ranger:
+					sniper esque class that likes to hide in corners or out of sight and aim. the bullet should have an SAO trail? the bullet should be a 						lightning bolt and be very fast. if the trail is up for more than half the time before sword swing it should hit you.
+				technomancer:
+					can cause weather effects so its harder to see(storms). if storming lightning can randomly strike(1/10ish chance of hitting you, 6/10 						being close, 3/10 being far. can use the lightning to teleport around
+					can make metal surfaces dangerous
+					set shock traps to block off horizontal/vertical spots
+					can give enemies speed boost
+			----
+			Neutral
+				in overworld, passages between levels, outside towns, etc.
+				Things like bats, lava beetles, fish, hawks, etc. will always attack you
 				
+			--Rouges/banished
+				most everywhere
+				no faction
+				will always attack you. more like other human enemies(sword combat, jumping, countering, etc)
+			
+			moon enemies will fight all sun enemies(you in armor)
+			sun enemies will fight all moon enemies(you in armor)
+			they will leave you alone until you aggro something in the area(screen? few screens? what feels natural. maybe save resets aggro not for that screen)
+						
+		
 				
 
 ------------------------------------------------------------------------------
@@ -99,11 +169,6 @@ SAVE SYSTEM:
 	--ADDED: JSON File System
 		--Needed
 			-encrypting save files, not allowing players to open JSON
-------------------------------------------------------------------------------
-ENEMIES:
-	--ADDED: obj_enemyParent. STATUS: INCOMPLETE
-		--Needed
-		-Enemies attacking back
 ------------------------------------------------------------------------------
 TEXT ENGINE:
 	--ADDED: Text Engine. STATUS: Complete, extendable	
