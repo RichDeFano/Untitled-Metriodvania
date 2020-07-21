@@ -6,15 +6,16 @@ if (instance_exists(tempFog))
 
 if (height < maxHeight)
 {
-	//var q,p;
-
+	firing = true;
 		for(q = 0; q<width;q++)
 		{
+			ds_grid_set(magnitudeGrid,q,height,vecMag);
+			ds_grid_set(angleGrid,q,height,vecAngle);
 			//width broken
-			var newWater = instance_create_layer(x+((5*width)*q),y-16*(height),"ObjUnderPlayer",obj_waterStream);
+			//var newWater = instance_create_layer(x+((5*width)*q),y-16*(height),"ObjUnderPlayer",obj_waterStream);
 			//var newWater = instance_create_layer(x+((4*width)*((height))+(16*q)),y-(16*(height)-(16*q)),"ObjUnderPlayer",obj_waterStream);
-			newWater.image_angle = image_angle;
-			newWater.passable = pass;
+			//newWater.image_angle = image_angle;
+			//newWater.passable = pass;
 			//newWater.sprite_ = sprite_width;
 			
 		}
@@ -25,10 +26,7 @@ else
 {
 //alarm[1] = 150;
 //tempFog = instance_create_layer(x,y-16*(height-1),"ObjOverPlayer",obj_fogTop);
-alarm[0] = randStart;
-height = 0;
-alarm[1] = randStart+40;
-//alarm[2] = 25;
+alarm[2] = 125;
 }
 
 

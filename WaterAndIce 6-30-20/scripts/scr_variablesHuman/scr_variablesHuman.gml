@@ -31,6 +31,7 @@ havePresetMoved = false;
 canDashJump = false;
 dashJumping = false;
 extrahsp = 0;
+extravsp = 0;
 //physics
 playerOnIce = false;
 frict = 0;

@@ -1,7 +1,7 @@
 ---------------------------------NEEDED FOR ENGINE------------------------------------------------------------------------------
 Physics System:
 	--STATUS: INCOMPLETE
-	--ADDED: Ice, Water, Hookshot, Movement all share a common momentum. Dash jumping added.
+	--ADDED: Ice, Water, Hookshot, Movement all share a common extra momentum. Dash jumping added.
 		Multiple types of terrain(slowing liquids, non climbable/hookshotable walls)
 		-Needed
 			dash + quickly press back = wavedash/backdash
@@ -11,17 +11,21 @@ Physics System:
 			sword while dashing? or speed up dash. dash speed could be like a roll
 			lava (platforms bubbling up), light boots let you walk slowly	
 			wall slide momentum - up if you have enough(expecially on ice)
+			//grabbing ledges and climbing up/dropping down on ledge(only if you have wall cling)? wall cling might make it feel clunky
+			hookshot on enemy should be different for each armor
+				moon(switch positions)
+				sun(charge opponent and stun them if they arent shielding)
+				normal(short stun
 			
 		Water Stuff:
 			need wavy top of water, right now its just flat
 			need collision with water surface to cause ripples
-			jumping into water from above lets you wade on surface
-				pressing action lets you dive, if you have flippers you swim, otherwise you sink
-				swimming is fast, like majoras mask.
-			Water jets
-				passable with dash/momentum vs non passable
+			
+			Water jet additions
+				non passable with dashing
 					non passable should do one of the following: turn you around, do dmg, act as a no climb wall/give a little velocity
 				can plug/turn off with rocks/switches/etc.
+				sprites instead of dots
 ------------------------------------------------------------------------------
 UPGRADES(Sun and Moon):
 	--ADDED: Shrine System STATUS: INCOMPLETE
@@ -40,6 +44,11 @@ UPGRADES(Sun and Moon):
 			-Armor:
 			-Movement:
 			-Counter: Parry/Riposte
+			
+			armor bonus is given by meditating - staying idle for a while.
+			no armor meditate stops status effects from harming you any further
+			enemies will do double dmg if they break your meditation
+			
 ------------------------------------------------------------------------------				
 COMBAT:
 	--ADDED: Sword Mechanics. STATUS: INCOMPLETE
@@ -52,6 +61,102 @@ COMBAT:
 				-Armor: N/A
 				-Movement: Dash Upgrade
 				-Counter: Parry/Riposte
+				
+				
+			holding down puts up a block(stamina gain /2)
+			pressing button causes the parry to go off
+			
+			Parrying beats heavy hits(counters their momentum)
+			heavy hits beat short hits(no hitstun to stop you)
+			short hits beats parrying(can only block one hit, but then left open as you swing/thrust back)
+			
+			blocks stop short hits
+			bocks on heavies will cause both players to clink on
+			
+			short hits have no hitstun, but multiple short hits will cause bleed
+			heavy hits have hitstun/momentum, but has recovery frames for player(still should be able to combo though)
+			
+			the same kind of hit will clink with enemy. depending on your armor, the recovery time will be short(moon) to long(sun)
+			
+			moon combat about getting a few strikes in and then repositioning/dodging/parrying big moves
+				moon combat in air is very flashy
+				should always feel faster than opponent
+				should usually be able to dodge abilities as long as you dont commit to one more attack
+				
+				weak if caught out
+				weak to heavies
+			
+			sun combat is about getting in one large hit.
+				can rush enemies that are overly aggro and tank a hit or two
+				can break shield with end of combo/some arials
+------------------------------------------------------------------------------
+ENEMIES:
+	--ADDED: obj_enemyParent. STATUS: INCOMPLETE
+		-need to flesh out character moveset before enemies can be designed around it
+		
+		range+support, damage dealer+swordsman, tank+distraction?
+		swordsman will always try to engage you, expecially if you are running at a mage/range
+		mage/range will try to evade and support, while doing dmg if they arent being pursued
+		
+		Sun enemies
+			Mages:
+				could have a staff or glow on arms to visualise incoming attacks(color may help too)
+				long animations, ranged attacks. no good melee defense or shielding. small hits can be blocked with sword
+				depends on the elements they are near(water, fire from torches/lava, earth in caves, nature in forest/swamp)
+				should have a move to distance from player, an aggressive projectile, an airial, and a team help
+					Water: waterbend jets to push player out of range
+						       create ice needles and throw them at player one at a time(very quick linear motion)	
+						       tsunami to jump high in the air(could do more needles down/at player)
+						       can cause fog to reduce visibility(spell glow goes through fog, gets worse if you leave him unharmed)
+					Fire: simple fireball
+					      lava projectile that creates lava pillars on surface
+					      manipulate light sources?
+					      ring of fire spin in air(more defensive/ make player stand back)
+					      lights enemies swords on fire for burn on hit
+					Earth:
+						send rocks at target
+						hit the floor that causes the player to trip/get knocked
+						can walk on walls/ceiling, and quick pillar shoot in a direction
+						other enemies cannot be knocked away, feet are set in stone
+						dropping/moving boulders and stalagmites
+					      
+			Swordsman(dark knight/iron knuckle style:
+				sword + shield/longsword/greatsword
+					S&S: good at blocking, not great at killing you. simple swings/jumps. possibly a roll
+					longsword: a little slower, but has a parry.
+					greatsword: big combo finishers if buffed(one special for each element
+					
+			--------
+			Moon enemies:
+			
+				Assassin:
+					sword class with quick attacks, lots of rolling, and wall climbing abilities.
+					higher tiers should have partial stealth(shimmering/mirror effect)
+					highest tiers should charge their sword before lightning strikes, use it as a large slash/combo finisher?
+					parry is naruto log style hit
+				Ranger:
+					sniper esque class that likes to hide in corners or out of sight and aim. the bullet should have an SAO trail? the bullet should be a 						lightning bolt and be very fast. if the trail is up for more than half the time before sword swing it should hit you.
+				technomancer:
+					can cause weather effects so its harder to see(storms). if storming lightning can randomly strike(1/10ish chance of hitting you, 6/10 						being close, 3/10 being far. can use the lightning to teleport around
+					can make metal surfaces dangerous
+					set shock traps to block off horizontal/vertical spots
+					can give enemies speed boost
+			----
+			Neutral
+				in overworld, passages between levels, outside towns, etc.
+				Things like bats, lava beetles, fish, hawks, etc. will always attack you
+				
+			--Rouges/banished
+				most everywhere
+				no faction
+				will always attack you. more like other human enemies(sword combat, jumping, countering, etc)
+			
+			moon enemies will fight all sun enemies(you in armor)
+			sun enemies will fight all moon enemies(you in armor)
+			they will leave you alone until you aggro something in the area(screen? few screens? what feels natural. maybe save resets aggro not for that screen)
+						
+		
+				
 
 ------------------------------------------------------------------------------
 BOSS FIGHTS:
@@ -64,11 +169,6 @@ SAVE SYSTEM:
 	--ADDED: JSON File System
 		--Needed
 			-encrypting save files, not allowing players to open JSON
-------------------------------------------------------------------------------
-ENEMIES:
-	--ADDED: obj_enemyParent. STATUS: INCOMPLETE
-		--Needed
-		-Enemies attacking back
 ------------------------------------------------------------------------------
 TEXT ENGINE:
 	--ADDED: Text Engine. STATUS: Complete, extendable	

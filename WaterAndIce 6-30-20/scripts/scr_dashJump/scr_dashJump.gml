@@ -25,7 +25,7 @@
 			dashing = false;
 			dashJumping = true;
 			//glowYellow = true;
-			extrahsp = 4;
+			extrahsp = 4*image_xscale;
 			}
 			else	///Regular Jumping
 			{

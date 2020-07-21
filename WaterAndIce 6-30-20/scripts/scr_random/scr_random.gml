@@ -135,7 +135,7 @@ else
 	global.canInteractTeleport = false;
 }
 
-/////Terrain Conditions
+/////Terrain Conditions and physics
 if ((place_meeting(x+1,y,obj_wall)) || (place_meeting(x-1,y,obj_wall)))
 {
 	if !((place_meeting(x+1,y,obj_noSlideWall)) || (place_meeting(x-1,y,obj_noSlideWall)))
@@ -176,11 +176,41 @@ if (place_meeting(x,y,obj_water))
 {
 	playerInWater = true;
 }
+
 else
 {
 	playerInWater = false;
 }
 
+if (instance_exists(obj_waterJet))
+	{
+		for (var i = 0; i < instance_number(obj_waterJet); i += 1)
+		{
+			var closestJet = instance_find(obj_waterJet,i);
+			if (closestJet.firing == true)
+			{
+				for(var h = 0; h < closestJet.maxHeight*2; h++){
+					for(var w=0; w<=closestJet.width*2;w++){
+						var newY = (h*8)*dcos(closestJet.image_angle) - (w*8)*dsin(closestJet.image_angle);
+						var newX = (h*8)*dsin(closestJet.image_angle) + (w*8)*dcos(closestJet.image_angle);
+						if ((abs(obj_Player.x-(closestJet.x-newX)) <= 8) && (abs(obj_Player.y-(closestJet.y-newY)) <= 16))
+						{
+						playerWaterStream = true;
+						glowYellow = true;
+						//playerInWater = true;
+						}
+					}
+				}
+			}
+			else
+			{
+				glowYellow = false;
+				playerWaterStream = false;
+			}
+		}
+	}
+
+/*
 if (place_meeting(x,y,obj_waterStream))
 {
 	playerWaterStream = true;
