@@ -9,11 +9,6 @@ if (global.statusSlowed == true)
 if ((global.inText == false) && (global.statusFrozen == false) && (global.atShrine == false))
 {
 
-//Hookshot
-	if (global.hookshotUnlocked == true)
-	{
-		scr_hookshotMain();
-	}
 
 ///Sword Stuff
 if ((attacking == true))
@@ -86,51 +81,62 @@ if ((attacking == false) && (dashing == false) && (dmgfrozen == false))
 /////Water Jets
 if (playerWaterStream == true)
 {
-	var dirX, dirY, mag, ang;
 	
 	if (instance_exists(obj_waterJet))
 	{
 		var endinghsp = 0; var endingvsp = 0;
-		for (var i = 0; i < instance_number(obj_waterJet); i += 1)
-		{
-			var closestJet = instance_find(obj_waterJet,i);
+		var totalMagX = 0;
+		var totalMagY = 0;
+		var totalAngle = 0;
+			//var closestJet = instance_find(obj_waterJet,i);
 			//var closestJet = instance_nearest(x,y,obj_waterJet);
-			if (closestJet.firing == true)
-			{
-					//draw_rectangle(x,y,x+newX,y-newY,true);
-					for(var h = 0; h < closestJet.maxHeight; h++){
-						for(var w=0; w<=closestJet.width;w++){
-							var newY = (h*16)*dcos(closestJet.image_angle) - (w*16)*dsin(closestJet.image_angle);
-							var newX = (h*16)*dsin(closestJet.image_angle) + (w*16)*dcos(closestJet.image_angle);
-							if ((abs(obj_Player.x-(closestJet.x-newX)) <= 16) && (abs(obj_Player.y-(closestJet.y-newY)) <= 16))
-							{
-							//draw_point_color(x-newX,y-newY,c_green);
-							//closestJet.drawMag = true;
-					
-							mag = ds_grid_get(closestJet.magnitudeGrid,w,h);
-							ang = ds_grid_get(closestJet.angleGrid,w,h);
-							///calculate x and y components
+			var i;
+			for (i = 0; i < instance_number(obj_waterJet); i += 1)
+			   {
+			   var currentJet = instance_find(obj_waterJet,i);
+					if (currentJet.firing == true)
+					{
+							//draw_rectangle(x,y,x+newX,y-newY,true);
+							for(var h = 0; h < currentJet.maxHeight; h++){
+								for(var w=0; w<=currentJet.width;w++){
+									var newY = (h*16)*dcos(currentJet.image_angle) - (w*16)*dsin(currentJet.image_angle);
+									var newX = (h*16)*dsin(currentJet.image_angle) + (w*16)*dcos(currentJet.image_angle);
+									if ((abs(obj_Player.x-(currentJet.x-newX)) <= 16) && (abs(obj_Player.y-(currentJet.y-newY)) <= 16))
+									{
+									//draw_point_color(x-newX,y-newY,c_green);
+									//closestJet.drawMag = true;
+									var mag, ang;
+									mag = ds_grid_get(currentJet.magnitudeGrid,w,h);
+									ang = ds_grid_get(currentJet.angleGrid,w,h);
+									///calculate x and y components
 				
-								if ((mag > 0) && (ang >= 0))//&& (image_xscale == 1))
-								{
-									var dirX, dirY;
-									dirX = mag*dcos(ang);
-									dirY = -mag*dsin(ang);
-					
-									endinghsp += dirX;
-								
-									if (key_up)
-									{endingvsp += dirY;}
-									else
-									{endingvsp = dirY/2;}
+										if ((mag > 0) && (ang >= 0))//&& (image_xscale == 1))
+										{
+											var dirX, dirY;
+											dirX = mag*dcos(ang);
+											dirY = -mag*dsin(ang);
+											totalMagX += dirX;
+												totalMagX = totalMagX/2;
+											totalMagY += dirY;
+												totalMagY = totalMagY/2;
+											totalAngle += ang;
+										}
+									}
 								}
 							}
-						}
-					}
+				
 				}
-		}
-		if (endinghsp < -6){endinghsp = -6;}
-		if (endinghsp > 6){endinghsp = 6;}
+				
+				
+			   }
+		endinghsp = totalMagX;
+								
+		if (key_up)
+			{endingvsp = totalMagY;}
+		else
+			{endingvsp = totalMagY/2;}
+		//if (endinghsp < -6){endinghsp = -6;}
+		//if (endinghsp > 6){endinghsp = 6;}
 		extrahsp = endinghsp;
 		extravsp = endingvsp;
 	}
@@ -142,6 +148,7 @@ else
 	//might not play well with hookshot
 }
 
+/////////////////Ice
 if (playerOnIce == true)
 {
 	if (move != 0){
@@ -176,6 +183,9 @@ else
 ////////////////////////Water
 if (playerInWater == true)
 {
+	jumps = jumpsmax;
+	candash = true;
+	
 	hsp = ((move * (movespeed)) + extrahsp)/1.1;
 	
 	//Falling twice as slowly because of the reduced gravity
@@ -232,6 +242,12 @@ else
 	}
 
 }
+
+//Hookshot
+	if (global.hookshotUnlocked == true)
+	{
+		scr_hookshotMain();
+	}
 
 
 

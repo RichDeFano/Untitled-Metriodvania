@@ -68,9 +68,33 @@ else
 	{vsp = 7;}
 	else {vsp = -7}
 }
+
+
+
+if (distance_to_point(ropeX-x,ropeY-y) < 6)
+{
 */
 hsp = ropeX - x;
 vsp = ropeY - y;
+/*
+}
+else
+{
+	
+	var xPercent, yPercent,a,b,c;
+	a = (ropeX - x);
+	b = (ropeY- y);
+	c = power(a,2) + power(b,2);
+	xPercent = power(a,2)/c;
+	yPercent = power(b,2)/c;
+	
+	hsp = 6*xPercent;
+	vsp = 6*yPercent;
+}
+*/	
+
+//need to move the player the difference between ropeX and ropeY
+//if the difference is too big, cap at a max speed(6-9?)
 
 //x += hsp;
 //y += vsp;
@@ -114,6 +138,7 @@ ropeAngleVelocity += _ropeAngleAcceleration;
 ropeAngle += ropeAngleVelocity;
 ropeAngleVelocity *=0.99;
 
+/*
 if (ropeMoving == true)
 {
 //ropeAngleVelocity += _ropeAngleAcceleration;
@@ -121,6 +146,7 @@ ropeAngle += ropeAngleVelocity;
 ropeAngleVelocity *=0.98;
 }
 
+*/
 
 
 if (key_jump)
@@ -142,9 +168,14 @@ if (key_dash)
 }
 
 
+
 ////////////////////////////////////
 //Collision Checking
 ////////////////////////////////////
+/*
+if (hsp > 6){hsp = 6;}
+if (hsp < -6) {hsp = -6;}
+*/
 var hsp_final = (hsp + hsp_carry);
 hsp_carry = 0;
 	yplus = 0;

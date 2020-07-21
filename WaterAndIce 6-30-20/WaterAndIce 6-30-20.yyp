@@ -2383,6 +2383,14 @@
             }
         },
         {
+            "Key": "925761cb-b8db-4df1-a612-8a1399455297",
+            "Value": {
+                "id": "cbb5a6a3-fa41-460c-9a0d-d8df0bbfaeb7",
+                "resourcePath": "objects\\armortest\\armortest.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "934e3ccd-89c0-4011-afe7-58d11f819d83",
             "Value": {
                 "id": "fe076116-d916-47fb-bf4d-aeaaa203d8ae",
@@ -4292,6 +4300,14 @@
                 "id": "74c4c12f-6ae5-4337-a92c-30b87fa64467",
                 "resourcePath": "sprites\\spr_frozenParitcle\\spr_frozenParitcle.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "f87363a3-478a-4439-aceb-efa7ff1b97e5",
+            "Value": {
+                "id": "2aeb62cb-a38a-4fe2-bc4a-9e90313f41c7",
+                "resourcePath": "shaders\\shd_stealth\\shd_stealth.yy",
+                "resourceType": "GMShader"
             }
         },
         {

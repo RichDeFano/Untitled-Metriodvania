@@ -17,7 +17,17 @@ if (firing == true){
 			}
 			else
 			{
-			draw_point_color(x-newX,y-newY,c_red);}
+				/*
+				var mag = ds_grid_get(magnitudeGrid,w,h);
+				if (mag < 2)
+				{draw_sprite_ext(spr_forceVector,0,x-newX,y-newY,1,1,image_angle,c_green,0.5);}
+				else if (mag >= 2) && (mag < 4)
+				{draw_sprite_ext(spr_forceVector,0,x-newX,y-newY,1,1,image_angle,c_yellow,0.75);}
+				else if (mag >= 4)
+				{draw_sprite_ext(spr_forceVector,0,x-newX,y-newY,1,1,image_angle,c_red,1);}
+				*/
+			draw_point_color(x-newX,y-newY,c_red);
+			}
 			//draw_point(x-newX,y-newY);
 		}
 	}

@@ -184,9 +184,9 @@ else
 
 if (instance_exists(obj_waterJet))
 	{
-		for (var i = 0; i < instance_number(obj_waterJet); i += 1)
-		{
-			var closestJet = instance_find(obj_waterJet,i);
+		//for (var i = 0; i < instance_number(obj_waterJet); i += 1)
+		//{
+			var closestJet = instance_nearest(x,y,obj_waterJet);//instance_find(obj_waterJet,i);
 			if (closestJet.firing == true)
 			{
 				for(var h = 0; h < closestJet.maxHeight*2; h++){
@@ -207,7 +207,7 @@ if (instance_exists(obj_waterJet))
 				glowYellow = false;
 				playerWaterStream = false;
 			}
-		}
+		//}
 	}
 
 /*
