@@ -34,7 +34,9 @@ BUGS:
 	COMBAT FIXES:
 		lunge doesnt hold momentum if you release button early
 		lunge momentum doesnt decrease, always constant
-		you cannot change directions on an arial once you start it
+		//you cannot change directions on an arial once you start it
+		//something broke dash
+		//can jump while swinging
 	General -
 		//swinging sword while on hookshot
 		//Upgrade counter on menu says 9/10 when at 10/10
@@ -44,3 +46,4 @@ BUGS:
 		opening menu when money is coming at you causes segfault
 		minimap can start too close to border - if x/y is past the movement ones
 		dashing up slopes doesnt work
+		dash jumping and then turning around still gives a little momentum
