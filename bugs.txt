@@ -15,31 +15,35 @@ BUGS:
 		//no hookshot walls - different as no dash walls. need both.
 		//room transitions /shooting out of room
 		//player not moving in the center - causes hookshot from wall to right to fail, causes shadow disparity
-		player horizontal speed should be capped for movement, and then have a slightly higher cap for things like 			rope/big dash/wall 			dash. preserved between rooms
+		//player horizontal speed should be capped for movement, and then have a slightly higher cap for things like rope/big dash/wall 				//dash. preserved between rooms
 		hookshot drops when you release the button
 		clicking down doesnt give proper momentum
 		if platform moves out of range of x and y, the hookshot wont hit the bottom of moving platform correctly
 		hookshot is drawn super extended even on hit(its onlyif its below you though)
 		hookshot doesnt attach if it hits a platform pre where its supposed to be
-		hookshot needs a max speed 
+		hookshot needs a max speed - you can give yourself way too much momentum
 			hookshot doesnt draw misfire
-			hookshot down gives too much momentum.
+			hookshot down gives too much momentum.(semi fixed by having you slide when hitting)
+		hookshot needs to be affected by water jets
+		hookshot not attaching to moving platforms correctly
+		
 
 	WATER FIXES:
-		water shader looks really bad on laptop
-		light filter looks bad on laptop
-		cant be affected by multiple jets
-		there is momentum when you first go to a new screen
+		//cant be affected by multiple jets
+		.//there is momentum when you first go to a new screen
 		
 	COMBAT FIXES:
-		lunge doesnt hold momentum if you release button early
-		lunge momentum doesnt decrease, always constant
+		//lunge doesnt hold momentum if you release button early
+		//lunge momentum doesnt decrease, always constant
 		//you cannot change directions on an arial once you start it
 		//something broke dash
 		//can jump while swinging
+		lunging off a platform causes you to float
 	General -
 		//swinging sword while on hookshot
 		//Upgrade counter on menu says 9/10 when at 10/10
+		water shader looks really bad on laptop
+		light filter looks bad on laptop
 		theres a little fall after warping. might be fixed by moving sprite
 		if youre swinging sword and heading towards a platform, you float at 2x speed
 		room transitions have draw issues, old screen flashes on screen for a few frames
@@ -47,3 +51,4 @@ BUGS:
 		minimap can start too close to border - if x/y is past the movement ones
 		dashing up slopes doesnt work
 		dash jumping and then turning around still gives a little momentum
+		
