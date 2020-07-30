@@ -6,13 +6,10 @@ Physics System:
 		Multiple types of terrain(slowing liquids, non climbable/hookshotable walls)
 		-Needed
 			dash should be - nothing for normal, invincible for shadow, and do knockback for
-			hookshot fixes
 			lava (platforms bubbling up), light boots let you walk slowly	
-
-			
 			pushing blocks
 			picking up objects?
-			
+
 			swimming with flippers
 			
 		Water Stuff:
