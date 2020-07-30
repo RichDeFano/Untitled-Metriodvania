@@ -38,6 +38,7 @@ BUGS:
 		//you cannot change directions on an arial once you start it
 		//something broke dash
 		//can jump while swinging
+		can lunge without stopping
 		lunging off a platform causes you to float
 	General -
 		//swinging sword while on hookshot
