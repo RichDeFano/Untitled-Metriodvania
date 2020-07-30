@@ -1,12 +1,12 @@
+
 ---------------------------------NEEDED FOR ENGINE------------------------------------------------------------------------------
 Physics System:
 	--STATUS: INCOMPLETE
 	--ADDED: Ice, Water, Hookshot, Movement all share a common momentum. Dash jumping added.
 		Multiple types of terrain(slowing liquids, non climbable/hookshotable walls)
 		-Needed
-			dash + quickly press back = wavedash/backdash
+			dash should be - nothing for normal, invincible for shadow, and do knockback for
 			hookshot fixes
-			sword while dashing? or speed up dash. dash speed could be like a roll
 			lava (platforms bubbling up), light boots let you walk slowly	
 
 			
@@ -28,22 +28,9 @@ Physics System:
 				can plug/turn off with rocks/switches/etc.
 ------------------------------------------------------------------------------
 UPGRADES(Sun and Moon):
-	--ADDED: Shrine System STATUS: INCOMPLETE
-		-Sun Armor
-			-Sword: Greatsword. Low combo potential. all swings have knockback. causes confusion/stun or maybe a burn effect
-			-Armor: Slowly heals you outside of combat(needs to be very slow), higher blink/hitstun time
-			-Movement: dash leaves behind a flashbang, will stun unless the enemy is fast enough to turn around
-			-Counter: Armored shell, will confuse/stun enemies on successful parry. you dont swing sword
-		-Moon Armor
-			-Sword: Dual tantos/Scimitars. One forward one back. High combo potential/neutral A is repeatable
-			-Armor: out of combat semi invis to sneak around enemies. lower blink time means you get comboed easier.
-			-Movement: zed shadow marker. 
-			-Counter: possible wavedash style jump back and swing?
-		-Dual Armor
-			-Sword:
-			-Armor:
-			-Movement:
-			-Counter: Parry/Riposte
+	--ADDED: Shrine System STATUS: COMPLETE(until sprites)
+		-Needed
+			Layering sprites(sword on top, armor, then character)
 ------------------------------------------------------------------------------				
 COMBAT:
 	--ADDED: Sword Mechanics. STATUS: INCOMPLETE
