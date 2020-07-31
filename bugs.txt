@@ -42,6 +42,16 @@ BUGS:
 		//can lunge without stopping
 		/lunging off a platform causes you to float
 		
+		enemy knockback needs to scale with weight difference and ability base
+		enemy knockback needs to be angled for each(possibly hardcoded?)
+		enemies need to switch between idle/roam/def/attack based on player position
+		testing if logic is sound for weapon clinking once attacks are in
+		
+		if enemy is knocked into a wall it should be stunned.
+		enemies should be affected by status effects(burning, poison, bleed, etc)
+		
+		player return physics is very broken- needs enemyhitbox
+		
 	ENEMY FIXES:
 		enemies should be hit away from the player - in any angle
 		enemies should lose most of their hsp on landing
