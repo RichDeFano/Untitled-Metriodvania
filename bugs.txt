@@ -38,18 +38,29 @@ BUGS:
 		//you cannot change directions on an arial once you start it
 		//something broke dash
 		//can jump while swinging
-		gravity issues
-		can lunge without stopping
-		lunging off a platform causes you to float
+		//gravity issues
+		//can lunge without stopping
+		/lunging off a platform causes you to float
+		
+	ENEMY FIXES:
+		enemies should be hit away from the player - in any angle
+		enemies should lose most of their hsp on landing
+		enemies should one of four alliances
+			Neutral(does not attack unless provoked)
+			Sun
+			Moon
+			Rouge(attacks most anything, pref player)
+		
 	ARMOR FIXES:
-		Add damageblink to shadow armor
-		Add slowhearts to sun armor
+		//Add damageblink to shadow armor
+			stealth should block projectiles. everything else will cancel stealth. attacking or blocking will cancel 			stealth.
+		//Add slowhearts to sun armor
+			in combat flames should come up if you are against 3+ enemies.
 		Add meditate pose
 	
 	MOVEMENT FIXES:
 		Need sun dash to knock back or stun enemies
 		Need sun dash to stop at enemy
-		need sun boots to be able to walk on lava
 		//Need to shorten all/some dashes
 		Need moon dash to confuse/disarm enemies
 		dashing up slopes doesnt work
@@ -61,7 +72,7 @@ BUGS:
 		water shader looks really bad on laptop
 		light filter looks bad on laptop
 		theres a little fall after warping. might be fixed by moving sprite
-		if youre swinging sword and heading towards a platform, you float at 2x speed
+		//if youre swinging sword and heading towards a platform, you float at 2x speed
 		room transitions have draw issues, old screen flashes on screen for a few frames
 		opening menu when money is coming at you causes segfault
 		minimap can start too close to border - if x/y is past the movement ones
