@@ -15,7 +15,7 @@ BUGS:
 		//no hookshot walls - different as no dash walls. need both.
 		//room transitions /shooting out of room
 		//player not moving in the center - causes hookshot from wall to right to fail, causes shadow disparity
-		//player horizontal speed should be capped for movement, and then have a slightly higher cap for things like rope/big dash/wall 				//dash. preserved between rooms
+		//player horizontal speed should be capped for movement, and then have a slightly higher cap for things like 				//rope/big dash/walldash. preserved between rooms
 		hookshot drops when you release the button
 		clicking down doesnt give proper momentum
 		if platform moves out of range of x and y, the hookshot wont hit the bottom of moving platform correctly
@@ -69,22 +69,20 @@ BUGS:
 		Add meditate pose
 	
 	MOVEMENT FIXES:
-		Need sun dash to knock back or stun enemies
-		Need sun dash to stop at enemy
+		Need sun/moon dash to cause knockback and status effects
 		//Need to shorten all/some dashes
-		Need moon dash to confuse/disarm enemies
-		dashing up slopes doesnt work
+		//dashing up slopes doesnt work
 		//remove zed shadow(too clunky)
 		//dash jumping and then turning around still gives a little momentum
 	General -
 		//swinging sword while on hookshot
 		//Upgrade counter on menu says 9/10 when at 10/10
-		water shader looks really bad on laptop
-		light filter looks bad on laptop
-		theres a little fall after warping. might be fixed by moving sprite
 		//if youre swinging sword and heading towards a platform, you float at 2x speed
 		room transitions have draw issues, old screen flashes on screen for a few frames
 		opening menu when money is coming at you causes segfault
 		minimap can start too close to border - if x/y is past the movement ones
+		water shader looks really bad on laptop
+		light filter looks bad on laptop
+		theres a little fall after warping. might be fixed by moving sprite
 		
 		
