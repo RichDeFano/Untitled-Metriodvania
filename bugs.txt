@@ -15,17 +15,24 @@ BUGS:
 		//no hookshot walls - different as no dash walls. need both.
 		//room transitions /shooting out of room
 		//player not moving in the center - causes hookshot from wall to right to fail, causes shadow disparity
-		//player horizontal speed should be capped for movement, and then have a slightly higher cap for things like 				//rope/big dash/walldash. preserved between rooms
-		hookshot drops when you release the button
-		clicking down doesnt give proper momentum
-		if platform moves out of range of x and y, the hookshot wont hit the bottom of moving platform correctly
-		hookshot is drawn super extended even on hit(its onlyif its below you though)
-		hookshot doesnt attach if it hits a platform pre where its supposed to be
-		hookshot needs a max speed - you can give yourself way too much momentum
-			hookshot doesnt draw misfire
-			hookshot down gives too much momentum.(semi fixed by having you slide when hitting)
+		//player horizontal speed should be capped for movement, and then have a slightly higher cap for things like 				
+		//rope/big dash/walldash. preserved between rooms
+		//hookshot drops when you release the button
+		//hookshot auto reloads if you are still holding the button
+		//hookshot doesnt attach if it finds a new block on a missed fire
+
+		//clicking down doesnt give proper momentum
+		//if platform moves out of range of x and y, the hookshot wont hit the bottom of moving platform correctly
+		//hookshot doesnt attach if it hits a platform pre where its supposed to be
+		//hookshot doesnt draw misfire
+		//hookshot not attaching to moving platforms correctly
+		
+		hookshot down gives too much momentum.(semi fixed by having you slide when hitting)
 		hookshot needs to be affected by water jets
-		hookshot not attaching to moving platforms correctly
+		hookshot needs a max speed - you can give yourself way too much momentum
+		hookshot is drawn super extended even on hit(its onlyif its below you though)
+		hookshot from above hemisphere gives too much acceleration
+		
 		
 
 	WATER FIXES:
