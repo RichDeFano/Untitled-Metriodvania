@@ -32,6 +32,9 @@ BUGS:
 		hookshot needs a max speed - you can give yourself way too much momentum
 		hookshot is drawn super extended even on hit(its onlyif its below you though)
 		hookshot from above hemisphere gives too much acceleration
+		///////////*********************
+		///////////New System needed - hookshot being under control of hsp and extra hsp
+		gravity effects you 
 		
 		
 
