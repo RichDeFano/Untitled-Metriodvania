@@ -20,12 +20,16 @@ BUGS:
 		//hookshot drops when you release the button
 		//hookshot auto reloads if you are still holding the button
 		//hookshot doesnt attach if it finds a new block on a missed fire
-
 		//clicking down doesnt give proper momentum
 		//if platform moves out of range of x and y, the hookshot wont hit the bottom of moving platform correctly
 		//hookshot doesnt attach if it hits a platform pre where its supposed to be
 		//hookshot doesnt draw misfire
 		//hookshot not attaching to moving platforms correctly
+		
+		hookshot speed increase should not depend on rope length
+		hookshot should have additive momentum(water jets, dashing for more speed, etc.)
+		hookshots initial speed shouldnt depend on angle
+		hookshot isnt centered on collision point(snake head moves around)
 		
 		hookshot down gives too much momentum.(semi fixed by having you slide when hitting)
 		hookshot needs to be affected by water jets
