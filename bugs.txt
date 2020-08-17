@@ -30,6 +30,9 @@ BUGS:
 		hookshot should have additive momentum(water jets, dashing for more speed, etc.)
 		hookshots initial speed shouldnt depend on angle
 		hookshot isnt centered on collision point(snake head moves around)
+		hookshot shouldnt work if youre grounded
+		
+		rocky mountain passthrough connnects two hydro plant, using all upgrades can surf between the two(fast sideways/semi climbing platforming with no ground
 		
 		hookshot down gives too much momentum.(semi fixed by having you slide when hitting)
 		hookshot needs to be affected by water jets
@@ -56,6 +59,7 @@ BUGS:
 		//can lunge without stopping
 		/lunging off a platform causes you to float
 		
+		armors should have a resource bar for spamming attacks with electricity/fire. this isnt applied to dual
 		enemy knockback needs to scale with weight difference and ability base
 		enemy knockback needs to be angled for each(possibly hardcoded?)
 		enemies need to switch between idle/roam/def/attack based on player position
