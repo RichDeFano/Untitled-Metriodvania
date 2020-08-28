@@ -26,7 +26,7 @@ BUGS:
 		//hookshot doesnt draw misfire
 		//hookshot not attaching to moving platforms correctly
 		
-		hookshot speed increase should not depend on rope length
+		//hookshot speed increase should not depend on rope length
 		hookshot should have additive momentum(water jets, dashing for more speed, etc.)
 		hookshots initial speed shouldnt depend on angle
 		hookshot isnt centered on collision point(snake head moves around)
